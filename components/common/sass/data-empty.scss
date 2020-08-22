@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+// 无数据
+.data-empty {
+  margin: 0 40px;
+  border-top: 0.01333rem solid rgba(0, 0, 0, 0.1);
+
+  > .empty-pic {
+    display: block;
+    width: 350px;
+    height: 350px;
+    margin: 100px auto 80px auto;
+  }
+
+  > .empty-msg {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #000000;
+  }
+
+  > .empty-tip {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #999999;
+  }
+
+  > .empty-back {
+    width: 220px;
+    height: 66px;
+    line-height: 66px;
+    margin: 50px auto 10px auto;
+    border-radius: 33px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 12px;
+    color: #ffffff;
+    background-color: #d3b07a;
+
+    > ._link {
+      display: block;
+      font-size: 24px;
+      letter-spacing: 12px;
+      color: #ffffff;
+    }
+  }
+}

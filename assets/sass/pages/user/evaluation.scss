@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+// 订单列表
+.order-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .order-header {
+    height: 120px;
+    line-height: 120px;
+
+    .header-left {
+      width: 110px;
+      margin-right: 130px;
+
+      > i {
+        display: block;
+        line-height: 120px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+    > .header-right {
+      border-radius: 8px;
+      width: 200px;
+      margin: 20px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  // 选项卡
+  > .order-tabs {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+
+    > .tab-item {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #999999;
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      &.active {
+        color: #d3b07a;
+      }
+    }
+  }
+
+  // 展开更多
+  > .open-more {
+    margin: 60px 40px 0 40px; // 100px
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #d3b078;
+  }
+}
+
+

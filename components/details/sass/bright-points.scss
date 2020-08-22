@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+// 车型亮点
+.model-bright-points {
+  margin: 0 40px;
+  > .title {
+    padding: 80px 0 40px 0;
+    border-bottom: 2px solid rgba(2, 2, 2, 0.1);
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+  }
+
+  > .bright-points-pics {
+    p {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  //> .bright-points {
+  //  margin-top: 36px;
+  //  > .points-item {
+  //    zoom: 1;
+  //
+  //    > img {
+  //      width: 100%;
+  //      height: auto;
+  //    }
+  //    > .bright-points-details {
+  //      // min-height: 350px;
+  //      padding-bottom: 100px;
+  //      text-align: center;
+  //
+  //      > h5 {
+  //        position: relative;
+  //        padding: 30px 52px;
+  //        font-size: 36px;
+  //        color: #000000;
+  //
+  //        &:after {
+  //          content: '';
+  //          position: absolute;
+  //          left: 50%;
+  //          bottom: 0;
+  //          width: 40px;
+  //          height: 2px;
+  //          margin-left: -20px;
+  //          background-color: #000000;
+  //        }
+  //      }
+  //
+  //      > p {
+  //        display: block;
+  //        line-height: 40px;
+  //        margin: 30px 32px 0 32px;
+  //        font-size: 22px;
+  //        color: #000000;
+  //        box-sizing: border-box;
+  //      }
+  //
+  //      &.left {
+  //        text-align: left;
+  //        background-color: #ededed;
+  //
+  //        > h5 {
+  //          &:after {
+  //            left: 76px;
+  //            transform: none;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+}

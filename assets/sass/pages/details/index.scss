@@ -1,0 +1,26 @@
+@charset "UTF-8";
+// 详情页
+.details-container {
+  margin-bottom: 100px;
+
+
+  // 内容区
+  .details-content {
+    padding-top: 70px;
+    // 主图
+    .maim-pic {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .float_btn {
+    position: fixed;
+    z-index: 20000;
+    bottom: 160px;
+    right: 2px;
+    width: 204px;
+    height: 108px;
+  }
+}

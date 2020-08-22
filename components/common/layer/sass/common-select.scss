@@ -1,0 +1,39 @@
+// 公共列表选择
+.common-select {
+  width: 100%;
+
+  .select-titles {
+    line-height: 80px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+    > div {
+      letter-spacing: 10px;
+      text-align: center;
+      font-size: 32px;
+
+      &.btn {
+        width: 140px;
+        color: #38f;
+      }
+    }
+  }
+  .picker {
+    .picker-items{
+      .picker-slot{
+        .picker-slot-wrapper{
+          .picker-item{
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+.mint-datetime {
+  width: 100%;
+  .picker-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+  }
+}

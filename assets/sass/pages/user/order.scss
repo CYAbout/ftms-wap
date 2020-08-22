@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+// 订单列表
+.order-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .order-header {
+    height: 120px;
+    line-height: 120px;
+    position: relative;
+
+    .header-left {
+      width: 110px;
+      margin-right: 130px;
+
+      > i {
+        display: block;
+        line-height: 120px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+    > .header-right {
+      border-radius: 8px;
+      width: 190px;
+      margin: 20px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #000000;
+      z-index: 9;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      li {
+        border-radius: 8px;
+        width: 100%;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        color: #000000;
+        background: white;
+      }
+    }
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+      margin-right: 250px;
+    }
+  }
+
+  // 选项卡
+  > .order-tabs {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+
+    > .tab-item {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #999999;
+
+      &:first-child {
+        width: 166px;
+        text-align: left;
+      }
+
+      &:last-child {
+        width: 166px;
+        text-align: right;
+      }
+
+      &.active {
+        color: #d3b07a;
+      }
+    }
+  }
+
+  // 订单列表内容
+  > .order-lists {
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    background-color: rgba(2, 2, 2, .1);
+    zoom: 1;
+    box-sizing: border-box;
+
+    > .order-item {
+      display: block;
+      height: 508px;
+      padding: 0 40px;
+      margin-top: 30px;
+      background-color: #ffffff;
+
+      // 订单头
+      > .item-header {
+        height: 96px;
+        line-height: 96px;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+        > .order-no {
+          font-size: 22px;
+          letter-spacing: 1px;
+          color: #000000;
+        }
+        > .order-state {
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          color: #d3b07a;
+        }
+      }
+
+      // 订单内容
+      > .item-content {
+        min-height: 260px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+        > .order-pic {
+          position: relative;
+          width: 210px;
+          height: 260px;
+          margin-right: 50px;
+
+          > img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: translateY(-50%);
+          }
+        }
+
+        > .order-info {
+          padding-top: 0.83333rem;
+
+          > .name {
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #000000;
+            @include multi-line-display(1);
+          }
+
+          > .attribute-item {
+            line-height: 40px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #999999;
+            @include multi-line-display(1);
+          }
+
+          > .intention {
+            line-height: 40px;
+            margin-top: 16px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+            @include multi-line-display(1);
+
+            > span {
+              color: #ceb181;
+
+              &:first-child {
+                font-size: 24px;
+                letter-spacing: 2px;
+              }
+              &:last-child {
+                font-size: 32px;
+                letter-spacing: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      // 操作按钮
+      > .operation-group {
+        margin-top: 40px;
+
+        > .btn-item {
+          width: 220px;
+          height: 66px;
+          line-height: 66px;
+          margin-right: 20px;
+          border-radius: 33px;
+          background-color: #d3b07a;
+          text-align: center;
+          font-size: 24px;
+          letter-spacing: 10px;
+          color: #ffffff;
+
+          &.verification-code{
+            letter-spacing: 6px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 展开更多
+  > .open-more {
+    margin: 60px 40px 0 40px; // 100px
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #d3b078;
+  }
+}
+
+

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.starsList {
+  // float: right;
+  li {
+    width: 64px;
+    height: 64px;
+    margin-left: 15px;
+    display: inline-block;
+  }
+  .darkStar {
+    display: inline-block;
+    background-image: url("~/assets/images/score/darkStar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .lightStar{
+    display: inline-block;
+    background-image: url("~/assets/images/score/lightStar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .halfStar{
+    display: inline-block;
+    background-image: url("~/assets/images/score/halfStar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .weakHalfStar{
+    display: inline-block;
+    background-image: url("~/assets/images/score/weakHalfStar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .strongHalfStar{
+    display: inline-block;
+    background-image: url("~/assets/images/score/strongHalfStar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}

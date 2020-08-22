@@ -1,0 +1,96 @@
+.pass-container {
+    margin-bottom: 100px;
+  
+    //头部
+    > .pass-header {
+      height: 100px;
+      line-height: 100px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+  
+      .header-left, .header-right {
+        width: 110px;
+  
+        > i {
+          display: block;
+          line-height: 100px;
+          text-align: center;
+          font-size: 30px;
+          font-weight: 600;
+          color: #a0a0a0;
+        }
+      }
+      > .header-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #000000;
+      }
+    }
+    // 心愿单列表
+  .list-item {
+    .goods-item {
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      margin-bottom: 50px;
+      margin-top: 20px;
+      .setting-img {
+        width: 100px;
+        height: 100px;
+      }
+      .btn {
+        width: 2.5rem;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        font-size: 28px;
+        text-align: center;
+        border-radius: 1.3rem;
+        position: relative;
+        left:6.3rem;
+        background-color: #d3b078;
+        color: #fff;
+      }
+    }
+    .collections {
+      display: flex;
+      justify-content: start;
+      font-size: 30px;
+      padding: 15px 30px;
+      .c-desc {
+        width: 50%;
+        padding: 30px 20px 20px 30px;
+        .title {
+          font-size: 30px;
+          color: #999999;
+        }
+      }
+      .c-img {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        img {
+          width: 274px;
+          height: 92px;
+        }
+      }
+      .c-img.color {
+        img {
+          width: 150px;
+          height: 80px;
+          margin: 0 auto;
+        }
+      }
+    }
+  .collect-lists {
+      display: block;
+      padding-top: 1px;
+      padding-bottom: 30px;
+      zoom: 1;
+      box-sizing: border-box;
+      background: #ffffff;
+      li {
+        text-align: center;
+      }
+    }
+  }
+}

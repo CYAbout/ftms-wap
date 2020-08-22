@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+// 公共尾部
+.common-footer {
+  margin: 0 40px;
+
+  .top-line {
+    height: 14px;
+    background-color: #d3b078;
+  }
+
+  .footer-content {
+    min-height: 790px;
+    border: solid 1px rgba(211, 176, 120, .3);
+    // opacity: 0.3;
+
+    >a> .logo {
+      display: block;
+      width: 434px;
+      height: 76px;
+      margin: 52px auto 44px auto;
+    }
+
+    > .about-us {
+      position: relative;
+      padding: 65px 76px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: 220px;
+        height: 2px;
+        margin-left: -110px;
+        background-color: #000000;
+        opacity: 0.1;
+      }
+
+      // 关于我们
+      > .about-us-group {
+        margin-top: 50px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        > .bm-flex {
+          > ._link {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            font-size: 22px;
+            color: #000000;
+            text-align: center;
+          }
+          // >._link:hover {
+          //   color: #D3B078;
+          // }
+
+          &:first-child{
+            > ._link {
+              text-align: left;
+            }
+          }
+          &:last-child{
+            > ._link {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    // 图标按你组
+    > .icon-group {
+      position: relative;
+      padding: 65px 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: 220px;
+        height: 2px;
+        margin-left: -110px;
+        background-color: #000000;
+        opacity: 0.1;
+      }
+
+      > .icon-item {
+        width: 44px;
+        height: 44px;
+        margin-right: 52px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          &.large {
+            width: 55px;
+          }
+        }
+        
+          // &::before {
+          //   content: '';
+          //   display: inline-block;
+          //   vertical-align: middle;
+          //   position: absolute;
+          //   left: 182px;
+          //   top: -100px;
+          //   height: 150px;
+          //   width: 150px;
+          //   // transform: scale(0);
+          //   // transition: all .6s ease-in-out;
+          //   // opacity: 0;
+          //   border: 1px solid #D3B078;
+          //   background-image: url("~@../../../assets/images/home/weixin.png");
+          //   background-size: contain;
+          // }
+        
+      }
+      // .icon-wechat:hover {
+      //   &::before {
+      //     // background-image: url(../../../assets/images/home/weixin.png);
+      //     transform: scale(1);
+      //     opacity: 1;
+      //   }
+      // }
+      // .icon-xcx:hover {
+
+      // }
+    }
+
+    // 热线
+    .phone-group {
+      position: relative;
+      width: 500px;
+      padding-top: 60px;
+      padding-bottom: 70px;
+      margin: 0 auto;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: 220px;
+        height: 2px;
+        margin-left: -110px;
+        background-color: #000000;
+        opacity: 0.1;
+      }
+
+       .phone-icon {
+        display: block;
+        width: 96px;
+        height: 98px;
+        margin-right: 42px;
+      }
+
+      .mobile-no {
+        height: 49px;
+        line-height: 49px;
+        font-size: 30px;
+        color: #000000;
+
+        > span {
+          height: 20px;
+          font-size: 26px;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 40px 0;
+    > .copyright{
+      > p{
+        line-height: 40px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 18px;
+        color: #373737;
+      }
+    }
+
+    > .record{
+      line-height: 30px;
+      margin-top: 28px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #373737;
+    }
+  }
+  .mint-popup {
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  .weChatshowed {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+  }
+  
+}

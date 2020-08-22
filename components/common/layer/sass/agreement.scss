@@ -1,0 +1,56 @@
+// 注册协议
+.agreement-layer {
+  width: 670px;
+  min-height: 802px;
+  height: auto;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+  .agreement-content {
+    overflow: scroll;
+    height: 802px;
+    > .agreement-title {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 45px;
+      letter-spacing: 5px;
+      color: #000000;
+    }
+
+    > .agreement-text {
+      //height: 600px;
+      line-height: 36px;
+      margin: 40px 36px 0 36px;
+      padding: 0;
+      font-size: 24px;
+      color: #333333;
+      overflow-y: auto;
+      @include hide-scrollbar;
+
+      > h5 {
+        line-height: 80px;
+        font-weight: 600;
+      }
+
+      > p {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -180px;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

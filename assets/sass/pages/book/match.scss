@@ -1,0 +1,907 @@
+@charset "UTF-8";
+
+// 选配订单
+.match-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .match-header {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    .iconfont {
+      width: 30px;
+      height: 29px;
+    }
+    .header-left, .header-right {
+      width: 110px;
+      > i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  // 配置
+  > .to-configure {
+    margin: 0 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    // 属性
+    .attribute-item {
+      height: 64px;
+      line-height: 64px;
+      margin-top: 50px;
+
+      > .configure-title {
+        width: 200px;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: #000000;
+      }
+      > .configure-pic {
+        position: relative;
+        width: 136px;
+        height: 64px;
+        line-height: 64px;
+        margin: 0 40px;
+
+        > img {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 64px;
+        }
+      }
+    }
+
+    // 版本 外观  内饰
+    //> .version, > .appearance, > .trim {
+    //  margin-top: 50px;
+    //  > .configure-title {
+    //    font-size: 32px;
+    //    font-weight: 600;
+    //    letter-spacing: 3px;
+    //    color: #000000;
+    //  }
+    //  > .edit-configure {
+    //    margin-top: 28px;
+    //
+    //    > .edit {
+    //      position: relative;
+    //      width: 250px;
+    //      height: 64px;
+    //      line-height: 64px;
+    //      padding: 0 60px 0 20px;
+    //      border-radius: 5px;
+    //      border: solid 2px #999999;
+    //      letter-spacing: 1px;
+    //      box-sizing: border-box;
+    //
+    //      > span {
+    //        font-size: 22px;
+    //        color: #000000;
+    //        @include multi-line-display(1);
+    //      }
+    //
+    //      > i {
+    //        position: absolute;
+    //        top: 0;
+    //        right: 30px;
+    //        font-size: 28px;
+    //      }
+    //    }
+    //    > .configure-pic {
+    //      position: relative;
+    //      width: 136px;
+    //      height: 64px;
+    //      line-height: 64px;
+    //      margin: 0 40px;
+    //
+    //      > img {
+    //        position: absolute;
+    //        top: 50%;
+    //        left: 0;
+    //        transform: translateY(-50%);
+    //        display: block;
+    //        width: 100%;
+    //        height: auto;
+    //        max-height: 64px;
+    //      }
+    //    }
+    //    > .configure-price {
+    //      height: 64px;
+    //      line-height: 64px;
+    //      text-align: right;
+    //      font-size: 22px;
+    //      letter-spacing: 2px;
+    //      color: #ceb181;
+    //
+    //      > span {
+    //        font-size: 32px;
+    //        color: #d3b07a;
+    //      }
+    //    }
+    //  }
+    //}
+  }
+
+  .test-time {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    color: #b9b9b9;
+  }
+
+  // 意向金
+  > .intentional-gold {
+    margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .intention-title {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    > .intention-tip {
+      margin-top: 18px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #999999;
+    }
+
+    .plan-time {
+      font-size: 20px;
+      ul {
+        margin-top: 30px;
+        li {
+          height: 50px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    > .edit-intention {
+      margin-top: 40px;
+
+      // > .label {
+      //   height: 64px;
+      //   line-height: 64px;
+      //   margin-right: 20px;
+      //   font-size: 28px;
+      //   color: #000000;
+      // }
+      > .label-left {
+        float: right;
+        height: 64px;
+        line-height: 54px;
+        margin: 0 0 0 20px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #d3b07a;
+      }
+      > .label-left-1 {
+        float: left;
+        height: 64px;
+        line-height: 64px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #d3b07a;
+        margin-left: 80px;
+      }
+      > .drive {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        input[type="radio"] {
+          &:last-child {
+            margin-left: 30px;
+          }
+        }
+      }
+      > .edit {
+        position: relative;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 60px 0 20px;
+        border-radius: 5px;
+        border: solid 2px #999999;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+        &.drive {
+          padding: 0;
+          input {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        > span {
+          font-size: 22px;
+          color: #000000;
+          @include multi-line-display(1);
+        }
+
+        > i {
+          position: absolute;
+          top: 0;
+          right: 30px;
+          font-size: 28px;
+        }
+      }
+    }
+    > .edit-intention-1 {
+
+      // > .label {
+      //   height: 64px;
+      //   line-height: 64px;
+      //   margin-right: 20px;
+      //   font-size: 28px;
+      //   color: #000000;
+      // }
+      > .label-left {
+        margin-top: 25px;
+        float: right;
+        height: 64px;
+        line-height: 54px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #d3b07a;
+      }
+      > .label-left-1 {
+        float: left;
+        height: 64px;
+        line-height: 64px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #d3b07a;
+        margin-left: 60px;
+      }
+    }
+  }
+  
+  // 经销商
+  > .distributor {
+    margin: 0 40px;
+    padding-top: 20px;
+    // padding-bottom: 50px;
+    // border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .distributor-title {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    > .distributor-tip {
+      margin-top: 18px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #999999;
+    }
+    .quickCheck {
+      border: 1px solid rgba(0, 0, 0, .2)!important;
+      input {
+        font-size: 24px;
+      }
+    }
+
+    // 省 市
+    > .province-select, > .city-select {
+      position: relative;
+      display: inline-block;
+      height: 64px;
+      width: 330px;
+      line-height: 64px;
+      padding: 0 60px 0 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      // font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+      
+      > span {
+        color: #b9b9b9;
+        font-size: 24px;  
+        @include multi-line-display(1);
+      }
+
+      > i {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 28px;
+      }
+    }
+     // 店名 地址
+     > .shop-select, > .address-select {
+      position: relative;
+      height: 64px;
+      width: 670px;
+      line-height: 64px;
+      padding: 0 60px 0 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      // font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+      
+      > span {
+        color: #b9b9b9;
+        font-size: 24px;  
+        @include multi-line-display(1);
+      }
+
+      > i {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 28px;
+      }
+    }
+    .city-select {
+      margin-right: 0;
+    }
+    // 个人信息
+    .personInfo {
+      margin-top: 50px;
+      >.personInfo-title {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      >.personInfo-content {
+        font-size: 24px;
+        input:first-child {
+          width: 400px;
+          height: 65px;
+          // border: 1px solid rgba(0, 0, 0, .2);
+          border: solid 2px #999999;
+          border-radius: 5px;
+          margin: 30px 30px 25px 0; 
+          font-size: 24px;
+          color: #b9b9b9;
+          background-color: #fff;
+          padding-left: 20px;
+        }
+        input[type="radio"] {
+          height: 24px;
+          width: 24px;
+          position: relative;
+          top: 5px;
+          margin-right: 5px;
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+        input[type=radio]{
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          position: relative;
+          top: 4px;
+          margin-right: 5px;
+          background-color: #fff;
+          -webkit-appearance:none;
+          border: 1px solid #9d9d9d;
+          outline: none;
+        }
+        input[type=radio]:checked{
+          background-color: #d3b07a;
+          border: 1px solid #d3b07a;
+        }
+        input[type='number'] {
+          width: 100%;
+          margin: 0;
+          padding-left: 20px;
+        }
+      }
+     }
+     // 试驾时间
+     .driveDate {
+        >.sel_date {
+          input[type="text"] {
+            width: 100%;
+          } 
+        }
+     }
+
+     // 计划购车时间
+     .buryCarTime {
+       >.buryCarTitle {
+          font-size: 30px;
+          font-weight: 600;
+          display: inline-block;
+        }
+        ul {
+          display: inline-block;
+          li {
+            float: left;
+            font-size: 24px;
+            font-weight: bolder;
+            margin-right: 30px;
+            input[type=radio]{
+              height: 24px;
+              width: 24px;
+              border-radius: 50%;
+              position: relative;
+              top: 4px;
+              margin-right: 5px;
+              background-color: #fff;
+              -webkit-appearance:none;
+              border: 1px solid #9d9d9d;
+              outline: none;
+              }
+              input[type=radio]:checked{
+                background-color: #d3b07a;
+                border: 1px solid #d3b07a;
+             }
+          }
+        }
+     }
+     // 协议
+     .protocol {
+       margin-top: 50px;
+       width: 100%;
+       text-align: center;
+       font-size: 24px;
+       font-weight: bolder;
+       position: relative;
+       input[type=checkbox]{
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        top: 5px;
+        left: 2rem;
+        background-color: #fff;
+        -webkit-appearance:none;
+        border: 1px solid #9d9d9d;
+        border-radius: 2px;
+        outline: none;
+       }
+       input[type=checkbox]:checked +label::before {
+        position: absolute;
+        top: 5px;
+        left: 2rem;
+        display: block;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        content: "\2713";
+        background-color: #d3b07a;
+        border: 1px solid #d3b07a;
+        font-size: 14px;
+        color: #FFF;
+       }
+       b {
+        font-weight: normal;
+        transition: color .6s;
+        color: #ceb181;
+       }
+     }
+
+    // 搜索
+    > .distributor-search {
+      height: 64px;
+      line-height: 64px;
+      margin-top: 20px;
+
+      > .edit {
+        height: 64px;
+        line-height: 64px;
+        padding: 0 20px;
+        border-radius: 5px;
+        border: solid 2px #999999;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+        > input {
+          display: block;
+          width: 100%;
+          // line-height: 60px;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 15px;
+          border: none;
+          font-size: 22px;
+          font-weight: 400;
+          color: #000000;
+          box-sizing: border-box;
+          @include multi-line-display(1);
+        }
+      }
+      > .search-btn {
+        width: 220px;
+        height: 64px;
+        line-height: 64px;
+        margin-left: 20px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #d3b07a;
+        box-sizing: border-box;
+        zoom: 1;
+
+        > i {
+          display: block;
+          height: 64px;
+          line-height: 64px;
+          font-size: 30px;
+          font-weight: 600;
+          color: #ffffff;
+        }
+      }
+    }
+
+    // 特约店
+    > .special-shop-list {
+      display: block;
+      margin-top: 20px;
+
+      > .shop-item {
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+
+        > .icon {
+          line-height: 40px;
+          margin-right: 20px;
+
+          > i {
+            display: block;
+            line-height: 40px;
+            font-size: 30px;
+            color: rgba(2, 2, 2, .1);
+          }
+        }
+        > .name {
+          font-size: 28px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30px;
+          letter-spacing: 1px;
+          color: #000000;
+        }
+
+        &.checked {
+          > .icon {
+            > i {
+              color: #d3b07a;
+            }
+          }
+          > .name {
+            color: #d3b07a;
+          }
+
+        }
+      }
+    }
+
+    // 展开更多
+    > .open-more {
+      margin: 60px 40px 0 40px; // 100px
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 1px;
+      color: #d3b078;
+    }
+  }
+
+  // 增换购
+  > .purchase {
+    margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .purchase-title {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    > .purchase-select {
+      height: 40px;
+      line-height: 40px;
+      margin-top: 40px;
+
+      > .do-checked {
+        > .icon {
+          line-height: 40px;
+          margin-right: 20px;
+
+          > i {
+            display: block;
+            line-height: 40px;
+            font-size: 30px;
+            color: rgba(2, 2, 2, .1);
+          }
+        }
+        > .name {
+          font-size: 28px;
+          letter-spacing: 1px;
+          color: #000000;
+        }
+
+        &.checked {
+          > .icon {
+            > i {
+              color: #d3b07a;
+            }
+          }
+          > .name {
+            color: #d3b07a;
+          }
+
+        }
+      }
+
+      > .rule-btn {
+        line-height: 40px;
+        margin-left: 30px;
+        font-size: 24px;
+        color: #d3b07a;
+      }
+    }
+
+    // VIN码
+    > .vin-edit {
+      height: 64px;
+      line-height: 64px;
+      padding: 0 20px;
+      margin-top: 30px;
+      margin-left: 50px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > input {
+        display: block;
+        width: 100%;
+        // line-height: 60px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+        border: none;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+        box-sizing: border-box;
+        @include multi-line-display(1);
+      }
+    }
+  }
+
+  // 提车人
+  .lift-man {
+    margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .lift-man-title {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    // 输入框
+    > .input-edit {
+      height: 64px;
+      line-height: 64px;
+      padding: 0 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > input {
+        display: block;
+        width: 100%;
+        // line-height: 60px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+        border: none;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+        box-sizing: border-box;
+        @include multi-line-display(1);
+      }
+    }
+
+    // 提示信息
+    > .lift-man-tip {
+      line-height: 30px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #999999;
+    }
+  }
+  .lift-tabs{
+    display:flex;
+    font-size: 28px;
+    .lift-tab{
+      flex:0 0 auto;
+      margin-right:30px;
+      &.cursor{
+        color:#ceb181;
+      }
+    }
+  }
+  // 支付方式
+  .payment-method {
+    margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .payment-title {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    // 选择支付方式
+    > .payment-select {
+      position: relative;
+      height: 64px;
+      line-height: 64px;
+      padding: 0 60px 0 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > span {
+        font-size: 22px;
+        color: #000000;
+        @include multi-line-display(1);
+      }
+
+      > i {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 28px;
+      }
+    }
+  }
+
+  // 支付金额
+  .amount-payment {
+    margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .amount-item {
+      text-align: right;
+      font-size: 28px;
+      font-weight: 600;
+      color: #000000;
+
+      &:last-child {
+        margin-top: 26px;
+      }
+
+      > span {
+        color: #ceb181;
+
+        &:first-child {
+          font-size: 24px;
+          letter-spacing: 2px;
+        }
+        &:last-child {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  // 服务条款
+  .service-provision {
+    margin: 0 40px;
+    padding-top: 60px;
+
+    > .icon {
+      line-height: 40px;
+      margin-right: 20px;
+
+      > i {
+        display: block;
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: 400;
+        color: rgba(2, 2, 2, .1);
+      }
+    }
+    > .name {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #000000;
+      >span {
+        color: #d3b07a;
+      }
+    }
+
+    &.checked {
+      > .icon {
+        > i {
+          color: #d3b07a;
+        }
+      }
+      > .name {
+        color: #000000;
+      }
+
+    }
+  }
+
+  // 提交按钮
+  .submit-btn {
+    width: 650px;
+    height: 80px;
+    line-height: 80px;
+    margin: 40px auto 0 auto;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 12px;
+    background-color: #d3b07a;
+    color: #ffffff;
+
+    > i {
+      margin-right: 30px;
+      font-size: 24px;
+      color: #fffffe;
+    }
+  }
+  .picker-toolbar {
+    font-size: 40px;
+  }
+  .picker-item {
+    font-size: 30px;
+  }
+}

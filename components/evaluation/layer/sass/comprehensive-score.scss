@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// 无数据
+.container {
+  > .allScore {
+    height: 180px;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);;
+    > p {
+      font-size: 32px;
+      font-weight:700;
+      margin-bottom: 40px;
+    }
+    > ul {
+      li {
+        margin: 20px;
+        display: inline-block;
+        > img{
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  > .everyScore {
+    // height: 532px;
+    padding: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    > div {
+      height: 63px;
+      width: 100%;
+      position: relative;
+      > b {
+        font-weight: normal;
+        font-size: .32rem;
+        line-height: 63px;
+        color: #666;
+        float: left;
+      }
+      > ul {
+        position: absolute;
+        right: 0;
+      }
+    }
+    > textarea {
+      border: none;
+      margin-top: 30px;
+      height: 316px;
+      width: 670px;
+      border-radius: 10px;
+      background: #f7f7f7;
+      font-size: 16px;
+      padding: 15px;
+      resize: none;
+    }
+    .wordnum {
+      position: absolute;
+      right: .8rem;
+      bottom: .8rem;
+      color: #999;
+      font-size: .14rem;
+    }
+  }
+  > .commit {
+    margin: 0 auto;
+    // padding-top: 20px;
+    // height: 70px;
+    width: 670px;
+    border-radius: 30px;
+    background: #d2b179;
+    color: #fff;
+    font-size: 24px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}

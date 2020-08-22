@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+// 订单详情
+.order-details-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .order-header {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+    .header-left, .header-right {
+      width: 70px;
+
+      > i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  // 消息具体详情
+  > .order-content {
+    padding: 20px;
+  }
+  .order-basic {
+    > .msg-title {
+      font-size: 30px;
+      width: 600px;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 10px;
+      // white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .msg-time {
+      font-size: 20px;
+      text-align: center;
+      // border-bottom: 1px solid rgba(2, 2, 2, .1);
+      padding-bottom: 15px;
+    }
+    > .msg-detail{
+      width: 600px;
+      font-size: 20px;
+      padding-left: 40px;
+      padding-top: 10px;
+    }
+  }
+}
+
+

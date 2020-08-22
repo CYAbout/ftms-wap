@@ -1,0 +1,47 @@
+// 活动结束
+.activity-end {
+  width: 670px;
+  height: 360px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  .activity-content {
+    > .text {
+      line-height: 40px;
+      margin: 110px 10px 90px 10px;
+      text-align: center;
+      font-size: 36px;
+      color: #333333;
+    }
+
+    // 按钮组
+    > .btn-group {
+      margin: 0 44px;
+      > div {
+        margin: 0 10px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 35px;
+        letter-spacing: 12px;
+        text-align: center;
+        font-size: 24px;
+
+        > i {
+          margin-right: 10px;
+        }
+
+        &.btn-back {
+          border: solid 2px #d3b078;
+          background-color: #d3b078;
+        }
+
+        &.btn-refresh {
+          background-color: #ffffff;
+          border: solid 2px #a0a0a0;
+        }
+      }
+    }
+  }
+}

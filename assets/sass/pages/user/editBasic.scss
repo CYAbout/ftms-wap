@@ -1,0 +1,127 @@
+@charset "UTF-8";
+.user-edit-container {
+  margin-bottom: 100px;
+  .user-header {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    .header-left,
+    .header-right {
+      width: 110px;
+
+      >i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+
+    >.header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+  .user-edit-basicInfo {
+    width: 100%;
+    text-align: center;
+    .header-pic {
+      padding-top: 70px;
+      padding-bottom: 60px;
+      img {
+        height: 170px;
+        width: 170px;
+      }
+      span {
+        display: block;
+        color: #a0a0a0;
+        font-size: 22px;
+      }
+      label {
+        font-size: 22px;
+        color: #a0a0a0;
+      }
+      input[type=file] {
+        background: rgba(255, 255, 255, 0);
+        width: 1px;
+        height: 1px;
+      }
+      .file-uploads {
+        height: 1px;
+      }
+    }
+    .edit-basic-info {
+      width: 100%;
+      padding-left: 40px;
+      text-align: left;
+      margin-bottom: 25px;
+      //background-color:red ;
+      span {
+        font-size: 26px;
+        display: inline-block;
+        color: black;
+      }
+      input {
+        width:60%;
+        height: 70px;
+        font-size: 22px;
+        color: black;
+        padding-left: 20px;
+        margin-left: 45px;
+        border: 1px solid #a0a0a0;
+        border-radius: 8px;
+        background-color: #fff;
+      }
+      input[type='radio'] {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        position: relative;
+        top: 8px;
+      }
+      .info-detail {
+        padding-left: 20px;
+      }
+    }
+    .edit-btn {
+      margin-top: 75px;
+      height: 70px;
+      margin-bottom: 130px;
+      span {
+        display: inline-block;
+        width: 310px;
+        height: 70px;
+        font-size: 26px;
+        color: #a0a0a0;
+        letter-spacing: 10px;
+        line-height: 70px;
+        text-align: center;
+        border: 1px solid #a0a0a0;
+        border-radius: 35px;
+        &:first-child {
+          float: left;
+          margin-left: 40px;
+          background-color: #ceb181;
+          border: none;
+          color: #fff;
+          .search-btn {
+            display: inline-block;
+          }
+        }
+        &:last-child {
+          float: right;
+          margin-right: 40px;
+          background-color: #F1F3F4;
+          .search-btn {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.model{
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 40px;
+  position: relative;
+  margin-bottom:0.4rem;
+  overflow:auto;
+  width:100%;
+}
+.modelList{
+  position:relative;
+  .facingsHeight{
+    height:6rem;
+  }
+  .facingsHeights{
+    height:3rem;
+  }
+  .moderHeights{
+    height:2rem;
+  }
+}
+.modelTitle{
+  background:#ffffff;
+  .model{
+    margin-bottom:0;
+  }
+  .config-right{
+    height:1.5rem;
+  }
+  .config-td{
+    height:1.5rem;
+  }
+  .config-td.oneHeight{
+    height:2.2rem;
+  }
+  .orange{
+    color:#d3b078;
+  }
+}
+.modelTitle.scroll{
+  position:fixed;
+  width:90%;
+  left:0;
+  right:0;
+  margin:auto;
+  top:1rem;
+  z-index: 2;
+  .model table{
+    margin-top:-0.26rem;
+  }
+}
+.modelTitleScroll{
+  height:5rem;
+}
+.model-left{
+  position:absolute;
+  left:0;
+  top:0;
+  width:3.66rem;
+  z-index: 1;
+  .Box{
+      table{
+        margin-left:0;
+      }
+  }
+  .title{
+    font-size:0.38rem;
+    height:1.44rem;
+    line-height:1.44rem;
+    width:8rem;
+    vertical-align: middle;
+    padding-left:20px;
+    position:relative;
+    span{
+      position:absolute;
+      width:8rem;
+      line-height: 0.5rem;
+      top:50%;
+      transform:translate(0,-50%)
+    }
+  }
+}
+.modelTable{
+  position:relative;
+  width:90%;
+  margin:auto;
+}
+.titleBox{
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+.headerTitle{
+  display: block;
+  font-weight: bold;
+  padding-bottom: 50px;
+  font-size: 35px;
+  color: #000000;
+  border-bottom: 0.05rem solid #dddddd;
+  text-align:center;
+}
+.title{
+  display: block;
+  font-weight: bold;
+  font-size: 0.44rem;
+  height:1.44rem;
+  color: #000000;
+}
+.selsct{
+  padding-top: 40px;
+  font-size: 25px;
+  color: #a0a0a0;
+  line-height: 0.6rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Box{
+  //padding-bottom: 30px;
+  // border-bottom: 1px solid #dddddd
+  width: 2.8rem;
+  table {
+    width: 100%;
+    margin-left: 2.8rem;
+    border-top:0.05rem solid #dddddd;
+  }
+}
+.content{
+  border-bottom: 0.05rem solid #dddddd
+}
+.line{
+  margin-top:0.05rem;
+  margin-bottom: 0.05rem;
+  font-size: 25px;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:9rem;
+  justify-content: center;
+  align-items: center;
+}
+.bc{
+  background: #efeeee;
+  width: 250px;
+  height: 180px;
+  display: block;
+  float: left;
+  padding-left: 10px;
+}
+.leftC{
+  margin: 0 auto;
+  float: left;
+  width: 90%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  align-items: Center;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.rightC{
+  float: left;
+  width: 2.25rem;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+.rightC.facingsHeight{
+  height:6rem;
+}
+.config-td{
+  background: #efeeee;
+  width: 150px;
+  height: 2.22rem;
+  font-size: 25px;
+}
+.config-left {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  color: #000000;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+  width: 40%;
+  padding-left: 10px;
+  border-bottom: 0.05rem solid #dddddd;
+}
+.config-right {
+  width: 60%;
+  background: #ffffff;
+  border-bottom: 0.05rem solid #dddddd;
+  border-right:0.05rem solid #dddddd;
+}
+.cloth{
+  background: #fdfbfb;
+  padding: 5px;
+  border-radius: 5px;
+}
+.li{
+  border-bottom: 0.05rem dashed #dddddd;
+  text-align: center
+}
+.ico{
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background: #d2b179;
+  display: block;
+  float: left;
+  // margin-left: 50px;
+  margin-top: 0px;
+}
+// .line{
+//   margin-left: 45px; 这个注释了
+// }
+.iconfont{
+  margin-left: 10px;
+}
+.suoming_box{
+  display: flex;
+  flex-direction: row;
+  .suoming_fl{
+      margin-right:0.05rem;
+      width:40px;
+      height:35px;
+      position: relative;
+      img{
+          width:20px;
+          height:20px;
+          position: absolute;
+          left:50%;
+          top:50%;
+          margin-top:-10px;
+          margin-left:-10px;
+      }
+  }
+  .suoming_fr{
+      font-size: 22px;
+      color:rgb(171,171,171);
+      line-height: 35px;
+  }
+
+}

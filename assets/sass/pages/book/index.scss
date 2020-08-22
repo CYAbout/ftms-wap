@@ -1,0 +1,131 @@
+@charset "UTF-8";
+// 预定
+.book-container {
+  margin-bottom: 100px;
+
+  // 头部
+  > .book-header {
+    background-color: #dee2e6;
+    padding: 40px 40px 10px 40px;
+
+    > .header-content {
+      padding-bottom: 28px;
+      // border-bottom: 2px solid rgba(0, 0, 0, .2);
+
+      > .titles {
+        > h4 {
+          font-size: 50px;
+          font-weight: 600;
+          color: #000000;
+        }
+        > p {
+          line-height: 30px;
+          margin-top: 14px;
+          font-size: 22px;
+          color: #000000;
+        }
+      }
+      > .wishlists-btn {
+        width: 280px;
+        height: 70px;
+        line-height: 70px;
+        border: solid 2px #000000;
+        border-radius: 35px;
+        letter-spacing: 5px;
+        text-align: center;
+        font-size: 26px;
+        color: #000000;
+
+        > i {
+          margin-right: 16px;
+        }
+      }
+      .step-title {
+        display: flex;
+        align-items: baseline;
+        font-size: 30px;
+        height: 50px;
+        border-bottom: 2px solid #d3b078;
+        padding-top: 12px;
+      }
+    }
+
+    //选项卡
+    > .tab-select {
+      margin-top: 26px;
+
+      > .tab-item {
+        > .tab-title {
+          position: relative;
+          padding-bottom: 10px;
+          font-size: 30px;
+          color: #000000;
+
+          > span {
+            text-align: center;
+            font-size: 30px;
+            color: #000000;
+          }
+        }
+        > .select-property {
+          line-height: 30px;
+          margin-top: 20px;
+          font-size: 22px;
+          color: #000000;
+          opacity: 0.6;
+        }
+
+        &.active {
+          > .tab-title {
+            color: #d3b078;
+
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              display: block;
+              width: 118px;
+              height: 4px;
+              background-color: #d3b078;
+            }
+          }
+        }
+
+        &.center {
+          text-align: center;
+
+          &.active {
+            > .tab-title {
+              &:after {
+                left: 50%;
+                bottom: 0;
+                margin-left: -59px;
+              }
+            }
+          }
+        }
+        &.right {
+          text-align: right;
+
+          &.active {
+            > .tab-title {
+              &:after {
+                left: unset;
+                bottom: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //内容区
+  > .book-content {
+    //margin-top: 30px;
+  }
+}
+
+

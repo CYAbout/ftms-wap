@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+// 车型配置
+.version-select {
+  // 显示大图
+  > .show-pic {
+    position: relative;
+    height: 814px;
+    background-color: #ffffff;
+
+    // 主图
+    > .main-pic {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      background-color: #d3b078;
+
+      > img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: translateY(-50%);
+      }
+
+      > .pic-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        width: 100%;
+        height: 550px;
+        background-color: #000000;
+        opacity: 0.6;
+        z-index: 10;
+      }
+
+      > .pic-tip {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        display: none;
+        text-align: center;
+        font-size: 26px;
+        color: #ffffff;
+        transform: translateY(-50%);
+        z-index: 12;
+      }
+
+      > .full-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: block;
+        width: 46px;
+        height: 46px;
+        font-size: 46px;
+        color: #ffffff;
+        z-index: 14;
+      }
+
+      //&:hover, &:host {
+      //  > .pic-mask {
+      //    display: block;
+      //  }
+      //  > .pic-tip {
+      //    display: block;
+      //  }
+      //}
+    }
+
+    // 选项
+    > .select-cads {
+      position: absolute;
+      left: 50%;
+      bottom: 45px;
+      width: 616px;
+      height: 130px;
+      margin-left: -308px;
+      border-radius: 65px;
+      background-color: #ffffff;
+      box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.09);
+
+      > .select-item {
+        border: none;
+        &:hover, &:host {
+          border: none;
+          box-shadow: #ffffff;
+        }
+
+        &:first-child {
+          border-top-left-radius: 65px;
+          border-bottom-left-radius: 65px;
+          box-shadow: #ffffff;
+        }
+        &:last-child {
+          border-top-right-radius: 65px;
+          border-bottom-right-radius: 65px;
+          box-shadow: #ffffff;
+        }
+
+        > .pic-label {
+          position: relative;
+          max-height: 98px;
+          margin-top: 20px;
+          padding-top: 70px;
+          text-align: center;
+          box-sizing: border-box;
+          zoom: 1;
+
+          > img {
+            position: absolute;
+            top: -34px;
+            // top: 0;
+            left: 50%;
+            display: block;
+            width: 246px;
+            height: auto;
+            margin-left: -123px;
+            border-radius: 66px;
+          }
+          > p {
+            line-height: 30px;
+            font-size: 20px;
+            color: #000000;
+          }
+        }
+
+        &.active {
+          background-color: #d3b078;
+          // border-radius: 65px;
+        }
+      }
+    }
+
+    // 轮播选择
+    .color-carouser {
+      position: absolute;
+      bottom: 45px;
+      height: 180px;
+      width: 100%;
+
+      // 轮播
+      > .swiper {
+        height: 180px;
+        > .swiper-wrapper {
+          // 选项
+          > .swiper-slide {
+            position: relative;
+            padding-top: 40px;
+
+            > .select-cads {
+              position: absolute;
+              left: 50%;
+              bottom: 64px;
+              width: 616px;
+              height: 130px;
+              margin-left: -308px;
+              border-radius: 65px;
+              background-color: #ffffff;
+              box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.09);
+
+              > .select-item {
+                border: none;
+                &:hover, &:host {
+                  border: none;
+                  box-shadow: #ffffff;
+                }
+
+                &:first-child {
+                  border-top-left-radius: 65px;
+                  border-bottom-left-radius: 65px;
+                  box-shadow: #ffffff;
+                }
+                &:last-child {
+                  border-top-right-radius: 65px;
+                  border-bottom-right-radius: 65px;
+                  box-shadow: #ffffff;
+                }
+                > .pic-label {
+                  position: relative;
+                  max-height: 98px;
+                  margin-top: 20px;
+                  padding-top: 70px;
+                  text-align: center;
+                  box-sizing: border-box;
+                  zoom: 1;
+
+                  > img {
+                    position: absolute;
+                    top: -34px;
+                    // top: 0;
+                    left: 50%;
+                    display: block;
+                    width: 246px;
+                    height: auto;
+                    max-height: 98px;
+                    margin-left: -123px;
+                    border-radius: 66px;
+                  }
+                  > p {
+                    line-height: 30px;
+                    font-size: 20px;
+                    color: #000000;
+                  }
+                }
+
+                &.active {
+                  background-color: #d3b078;
+                  //border-top-left-radius: 65px;
+                  //border-bottom-left-radius: 65px;
+                  // border-radius: 65px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      // 前进后退按钮
+      .swiper-button-prev, .swiper-button-next {
+        position: absolute;
+        top: unset;
+        bottom: 40px;
+        width: 40px;
+        height: 76px;
+        line-height: 76px;
+        border: 1px solid transparent; //自定义边框
+        outline: none; //消除默认点击蓝色边框效果
+        text-align: center;
+        font-size: 40px;
+        background-image: none;
+        color: #b7bcbf;
+      }
+      .swiper-button-prev {
+        left: 16px;
+      }
+      .swiper-button-next {
+        right: 16px;
+      }
+    }
+  }
+
+  // 全屏
+  .full-popup {
+    > .mint-popup {
+      top: $header-Height;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      display: block;
+      width: 100%;
+      height: 1234px;
+      transform: none;
+      // background-color: #ffffff;
+      background-color: #0e0e0e;
+      z-index: 2010;
+
+      > .full-popup-content {
+        position: relative;
+
+        > img {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: auto;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
+
+        > .back-icon {
+          position: absolute;
+          top: 56px;
+          left: 42px;
+          display: block;
+          width: 58px;
+          height: 58px;
+          line-height: 58px;
+          border-radius: 58px;
+          text-align: center;
+          font-size: 30px;
+          font-weight: 600;
+          background-color: #ffffff;
+          z-index: 12;
+        }
+
+        // 选项
+        > .select-cads {
+          position: absolute;
+          left: 50%;
+          bottom: 45px;
+          width: 616px;
+          height: 130px;
+          margin-left: -308px;
+          border-radius: 65px;
+          background-color: #ffffff;
+          box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.09);
+
+          > .select-item {
+            border: none;
+            &:hover, &:host {
+              border: none;
+              box-shadow: #ffffff;
+            }
+
+            &:first-child {
+              border-top-left-radius: 65px;
+              border-bottom-left-radius: 65px;
+              box-shadow: #ffffff;
+            }
+            &:last-child {
+              border-top-right-radius: 65px;
+              border-bottom-right-radius: 65px;
+              box-shadow: #ffffff;
+            }
+
+            > .pic-label {
+              position: relative;
+              max-height: 98px;
+              margin-top: 20px;
+              padding-top: 70px;
+              text-align: center;
+              box-sizing: border-box;
+              zoom: 1;
+
+              > img {
+                position: absolute;
+                top: -34px;
+                left: 50%;
+                display: block;
+                width: 246px;
+                height: auto;
+                max-height: 98px;
+                margin-left: -123px;
+                border-radius: 66px;
+              }
+              //> p {
+              //  line-height: 30px;
+              //  font-size: 20px;
+              //  color: #000000;
+              //}
+            }
+
+            &.active {
+              background-color: #d3b078;
+              //border-top-left-radius: 65px;
+              //border-bottom-left-radius: 65px;
+              // border-radius: 65px;
+            }
+          }
+        }
+
+        // 轮播选择
+        .color-carouser {
+          position: absolute;
+          bottom: 45px;
+          height: 180px;
+          width: 100%;
+
+          // 轮播
+          > .swiper {
+            height: 180px;
+            > .swiper-wrapper {
+              // 选项
+              > .swiper-slide {
+                position: relative;
+                padding-top: 40px;
+
+                > .select-cads {
+                  position: absolute;
+                  left: 50%;
+                  bottom: 64px;
+                  width: 616px;
+                  height: 130px;
+                  margin-left: -308px;
+                  border-radius: 65px;
+                  background-color: #ffffff;
+                  box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.09);
+
+                  > .select-item {
+                    border: none;
+                    &:hover, &:host {
+                      border: none;
+                      box-shadow: #ffffff;
+                    }
+
+                    &:first-child {
+                      border-top-left-radius: 65px;
+                      border-bottom-left-radius: 65px;
+                      box-shadow: #ffffff;
+                    }
+                    &:last-child {
+                      border-top-right-radius: 65px;
+                      border-bottom-right-radius: 65px;
+                      box-shadow: #ffffff;
+                    }
+                    > .pic-label {
+                      position: relative;
+                      max-height: 98px;
+                      margin-top: 20px;
+                      padding-top: 70px;
+                      text-align: center;
+                      box-sizing: border-box;
+                      zoom: 1;
+
+                      > img {
+                        position: absolute;
+                        top: -34px;
+                        left: 50%;
+                        display: block;
+                        width: 246px;
+                        height: auto;
+                        margin-left: -123px;
+                        border-radius: 66px;
+                      }
+                      > p {
+                        line-height: 30px;
+                        font-size: 20px;
+                        color: #000000;
+                      }
+                    }
+
+                    &.active {
+                      background-color: #d3b078;
+                      //border-top-left-radius: 65px;
+                      //border-bottom-left-radius: 65px;
+                      // border-radius: 65px;
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+
+          // 前进后退按钮
+          .swiper-button-prev, .swiper-button-next {
+            position: absolute;
+            top: unset;
+            bottom: 40px;
+            width: 40px;
+            height: 76px;
+            line-height: 76px;
+            border: 1px solid transparent; //自定义边框
+            outline: none; //消除默认点击蓝色边框效果
+            text-align: center;
+            font-size: 40px;
+            background-image: none;
+            color: #b7bcbf;
+          }
+          .swiper-button-prev {
+            left: 16px;
+          }
+          .swiper-button-next {
+            right: 16px;
+          }
+        }
+      }
+    }
+
+    > .v-modal {
+      top: $header-Height;
+    }
+  }
+}
+
+

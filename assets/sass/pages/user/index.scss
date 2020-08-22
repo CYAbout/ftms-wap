@@ -1,0 +1,131 @@
+@charset "UTF-8";
+// 用户中心
+.user-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .user-header {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    .header-left, .header-right {
+      width: 110px;
+
+      > i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  // 用户信息
+  > .user-information {
+    height: 170px;
+    line-height: 170px;
+    margin: 0 70px;
+    // 头像
+    .head-portrait {
+      padding: 25px 0;
+      > img {
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+        background-color: #eeeeee;
+      }
+    }
+    // 用户名
+    .user-name {
+      margin-left: 40px;
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: #000000;
+      @include multi-line-display(1);
+    }
+    .user-msg {
+      position: relative;
+      margin-right: 64px;
+      > i {
+        font-size: 50px;
+      }
+
+      > .dot {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: solid 3px #ffffff;
+        border-radius: 18px;
+        background-color: #e50020;
+      }
+    }
+    .to-edit {
+      > i {
+        font-size: 40px;
+      }
+    }
+  }
+
+  // 分割线
+  .segmenting-line {
+    height: 30px;
+    line-height: 30px;
+    background-color: #eeeeee;
+  }
+
+  // 导航列表
+  .navigation-list {
+    margin: 0 70px;
+    > .navigation-item {
+      height: 124px;
+      line-height: 124px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+      > ._link {
+        > .icon {
+          width: 30px;
+          margin-right: 26px;
+          text-align: left;
+
+          > i {
+            display: block;
+            line-height: 124px;
+            font-size: 32px;
+            color: #d3b078;
+          }
+        }
+        > .navigation-title {
+          font-size: 28px;
+          color: #000000;
+          @include multi-line-display(1);
+        }
+        > .next-icon {
+          width: 30px;
+          text-align: center;
+
+          > i {
+            display: block;
+            line-height: 124px;
+            font-size: 20px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+

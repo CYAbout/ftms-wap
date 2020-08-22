@@ -1,0 +1,422 @@
+<krpano>
+    <style name="dynamic0" url="%SWFPATH%/autoskin/hotspotpng/dynamic4.png" crop="0|0|50|50" framewidth="50" frameheight="50" frame="0" lastframe="99" seep="0.02" scale="1" titlemargin="0" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic4" url="%SWFPATH%/autoskin/hotspotpng/dynamic4.png" crop="0|0|50|50" framewidth="50" frameheight="50" frame="0" lastframe="99" seep="0.02" scale="1" titlemargin="0" onloaded="init_animate_hotspot();"/>
+
+    <style name="dynamic_"  url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_" devices="handheld" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+
+    <style name="dynamic_0x5b7f95"  url="%SWFPATH%/newui/anim-point-0x5b7f95.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_0x5b7f95" devices="handheld" url="%SWFPATH%/newui/anim-point-0x5b7f95.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    
+    <style name="dynamic_0xbdd6e2"  url="%SWFPATH%/newui/anim-point-0xbdd6e2.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_0xbdd6e2" devices="handheld" url="%SWFPATH%/newui/anim-point-0xbdd6e2.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    
+    <style name="dynamic_0xd6d2c2"  url="%SWFPATH%/newui/anim-point-0xd6d2c2.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_0xd6d2c2" devices="handheld" url="%SWFPATH%/newui/anim-point-0xd6d2c2.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    
+
+    <style name="dynamic_text0"  url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_text0" devices="handheld" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <!-- <style name="dynamic_text0"  url="%SWFPATH%/autoskin/hotspotpng/dynamic_text0.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_text0" devices="handheld" url="%SWFPATH%/autoskin/hotspotpng/dynamic_text0.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+     -->
+     
+    <style name="dynamic_image0" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>    
+    <style name="dynamic_image0" devices="handheld" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <!-- <style name="dynamic_image0" url="%SWFPATH%/autoskin/hotspotpng/dynamic_image0.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="1.0" titlemargin="15" onloaded="init_animate_hotspot();"/>    
+    <style name="dynamic_image0" devices="handheld" url="%SWFPATH%/autoskin/hotspotpng/dynamic_image0.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/> -->
+    
+    <style name="dynamic_video0" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="1" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_video0" devices="handheld" url="%SWFPATH%/newui/anim-point.png" crop="0|0|100|100" framewidth="100" frameheight="100" frame="0" lastframe="52" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <!-- <style name="dynamic_video0" url="%SWFPATH%/autoskin/hotspotpng/dynamic_video0.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="1" titlemargin="15" onloaded="init_animate_hotspot();"/>
+    <style name="dynamic_video0" devices="handheld" url="%SWFPATH%/autoskin/hotspotpng/dynamic_video0.png?v=20170526" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="37" seep="0.02" scale="0.7" titlemargin="15" onloaded="init_animate_hotspot();"/> -->
+    
+    <!--<style name="dynamic_video0" url="%SWFPATH%/autoskin/hotspotpng/dynamic_video0.png" crop="0|0|56|56" framewidth="56" frameheight="56" frame="0" lastframe="17" seep="0.10" scale="0.6" titlemargin="0" onloaded="init_animate_hotspot();"/>-->
+    
+    <!-- <plugin name="swiper" keep="true" url.html5="%SWFPATH%/plugins/swiperPlugin_0423.js" x="0" y="0"  mode="swiper" visible="false"/>     -->
+    
+    <action protect="true" name="init_animate_hotspot">
+        copy(titlename,name);
+        hotspot_animate();
+        ifnot(webvr.isenabled,
+            addplugin(get(titlename));
+            txtadd(plugin[get(titlename)].parent,'hotspot[',get(name),']');
+
+            if(wz == r,
+                set(plugin[get(titlename)].align,right);
+                set(plugin[get(titlename)].edge,left);
+            );
+            if(wz == l,
+                set(plugin[get(titlename)].align,left);
+                set(plugin[get(titlename)].edge,right);
+            );
+            if(wz == t,
+                set(plugin[get(titlename)].align,top);
+                set(plugin[get(titlename)].edge,bottom);
+                set(plugin[get(titlename)].y,get(titlemargin)); 
+            );
+            if(wz == m,
+                set(plugin[get(titlename)].align,bottom);
+                set(plugin[get(titlename)].edge,top);
+            );
+
+            if(device.flash,
+                if(scale LT 1,
+                    txtadd(lshtml,'　',get(titlename),'　　',);
+                    , txtadd(lshtml,'　',get(titlename),'　',);
+                );
+                //set(plugin[get(titlename)].html,get(lshtml)); ,
+                set(plugin[get(titlename)].html,get(htitle));
+            );
+            ,
+            ifnot(hotspot[get(titlename)].htype ==="scene",
+                removehotspot(get(titlename));
+            );
+        );
+
+        if(htype ==="scene",
+            set(plugin[get(titlename)].html,get(htitle));
+            loadstyle(load_scene);
+            set(plugin[get(titlename)].hlink,get(hlink));
+            plugin[get(titlename)].loadstyle(txt_style|hotspot_title|load_scene);
+        );
+        if(htype ==="text",
+            set(plugin[get(titlename)].html,get(htitle));
+            loadstyle(load_text);
+            plugin[get(titlename)].loadstyle(txt_style|hotspot_title|load_text);
+        );
+
+        if(htype ==="image",
+            set(plugin[get(titlename)].html,get(htitle));
+            loadstyle(load_image);
+            plugin[get(titlename)].loadstyle(txt_style|hotspot_title|load_image);
+        );
+
+        if(htype ==="video",
+            set(plugin[get(titlename)].html,get(htitle));
+            loadstyle(load_video);
+            plugin[get(titlename)].loadstyle(txt_style|hotspot_title|load_video);
+        );
+
+        if(htype === "rich",
+            <!--set(plugin[get(titlename)].html,get(htitle));-->
+            loadstyle(load_iframe);
+            <!--set(plugin[get(titlename)].hlink,get(hlink));-->
+            plugin[get(titlename)].loadstyle(txt_style|hotspot_title|load_iframe);
+        ) ;
+
+        ifnot(htitle,
+            set(plugin[get(titlename)].visible,false);
+        );
+
+        if(device.flash,
+            set(plugin[get(titlename)].height,25);
+        );
+
+        set(plugin[get(titlename)].visible,false);
+    </action>
+    <action name="hotspot_animate">
+        inc(frame,1,get(lastframe),0);
+        mul(ypos,frame,frameheight);
+        txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+        delayedcall(
+        get(seep),
+        if(loaded,hotspot_animate(););
+        );
+    </action>
+    <style name="load_scene" distorted="false" onclick="load_scene();"/>
+    <!--<style name="load_text" distorted="false" onclick="show_textpanel();"/>-->
+    <style name="load_text" distorted="false" onclick="anim_info();"/>
+    <!-- <style name="load_image" distorted="false" onclick="show_gallry();"/> -->
+    <style name="load_image" distorted="false" onclick="anim_info();"/>
+    <!-- <style name="load_video" distorted="false" onclick="load_video();"/> -->
+    <style name="load_video" distorted="false" onclick="anim_info();"/>
+
+    <style name="txt_style" url="%SWFPATH%/plugins/textfield.swf"/>
+    <style name="hotspot_title" vcenter="true" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-size:16px;margin:5px 8px 5px 8px;" backgroundcolor="0x000000" backgroundalpha="0.4" roundedge="3" />
+
+    <style name="nadirlogo" keep="true"  url="%SWFPATH%/autoskin/hotspotpng/logo.png" ath="0" atv="90" width="256" height="256" distorted="true" scale="1" rotate="0.0" handcursor="false" />
+    <style name="gobackhall" keep="true"  url="%SWFPATH%/autoskin/hotspotpng/gobackhall.png" ath="0" atv="90" width="100" height="100" distorted="true" scale="1" rotate="0.0" handcursor="true" />
+    
+    <action name="anim_info">
+        set(animClick,'');
+        txtadd(animClick,"xmlCall.animClickHandle('",get(hotspot[get(name)].htitle),"','",get(hotspot[get(name)].htype),"','",get(hotspot[get(name)].colorvalue),"','",get(hotspot[get(name)].showstyle),"','",get(name),"','",get(hotspot[get(name)].preview),"')");
+        <!-- trace(animClick); -->
+        jscall(get(animClick));
+        set(layer[skin_scroll_window].visible,false);
+        for(set(i,0), i LT hotspot.count, inc(i),
+            if( hotspot[get(i)].index !== index AND (hotspot[get(i)].htype === 'video' || hotspot[get(i)].htype === 'image' || hotspot[get(i)].htype === 'text') ,
+                <!-- trace(hotspot[get(i)].name); -->
+                set(hotspot[get(i)].visible, false);
+            )
+        );
+    </action>
+
+    <action name="anim_showall">
+        for(set(i,0), i LT hotspot.count, inc(i),
+            if( hotspot[get(i)].htype === 'video' || hotspot[get(i)].htype === 'image' || hotspot[get(i)].htype === 'text' ,
+                trace(hotspot[get(i)].name);
+                set(hotspot[get(i)].visible, true);
+            )
+        );  
+    </action>
+
+    <action protect="true" name="load_scene">
+        if(hotspot[get(name)].hlink, skin_loadscene(get(hlink)); );
+    </action>
+    <action protect="true" name="lock_hide_skin">
+        set(last_thumbsshow, get(thumbsshow));
+        set(last_ui_show, get(ui_show)); 
+        
+        skin_hide_ui();
+        set(autorotate.enabled,false);
+        set(events[skin_events].onclick,"");
+        set(control.usercontrol, off);      
+    </action>    
+    <action protect="true" name="unlock_show_skin">    
+        trace("unlock_show_skin");
+        if(last_ui_show ===true,skin_show_ui(););
+        
+        skin_showthumbs(get(last_thumbsshow));
+        set(autorotate.enabled,true);   
+        set(control.usercontrol, all);
+        set(events[skin_events].onclick,"skin_click();"); 
+    </action>    
+    <action protect="true" name="lock_skin">      
+        set(autorotate.enabled,false);
+        set(events[skin_events].onclick,"");
+        set(control.usercontrol, off);      
+    </action>    
+    <action protect="true" name="unlock_skin"> 
+        set(autorotate.enabled,true);   
+        set(control.usercontrol, all);
+        set(events[skin_events].onclick,"skin_click();"); 
+    </action>      
+    <action protect="true" name="anim_click_event">
+        set(sendlog_funcall,'');
+        txtadd(sendlog_funcall,
+            'sendClickEvent("',%2,'","click","text","' 
+            , get(hotspot[%1].id)
+            ,'","' ,get(hotspot[%1].name) ,'","' 
+            , get(scene[get(xml.scene)].id) 
+            ,'","' ,get(scene[get(xml.scene)].name) ,'",' 
+            ,get(webvr.isenabled) 
+            ,',0,0);' 
+        );
+        <!-- trace(sendlog_funcall); -->
+        jscall(get(sendlog_funcall)); 
+    </action>  
+    <action protect="true" name="show_textpanel">
+        trace('name=',%1);
+        lock_hide_skin();
+        set(layer[textpanel_con].visible,true);
+        
+        set(layer[textpanel_title].html,get(hotspot[%1].htitle));
+        set(layer[textpanel_body].html,get(hotspot[%1].hlink));
+        set(layer[textpanel_body_vert].html,get(hotspot[%1].hlink));     
+        set(layer[textpanel_body_hori].html,get(hotspot[%1].hlink));    
+        set(layer[textpanellike_txt].html,get(hotspot[%1].likecount));     
+        
+        
+        if(device.handheld,
+            if(stagewidth GT stageheight, 
+                resize_textpanel(true); 
+                ,resize_textpanel(false);
+            );
+        );
+        
+        set(layer[textpanel_con].hotspotid, get(hotspot[%1].id));
+        set(layer[textpanel_con].hotspotname, get(hotspot[%1].name));
+        set(layer[textpanel_con].opentime, get(timertick));
+        
+        set(sendlog_funcall,'');
+        txtadd(sendlog_funcall,
+            'sendClickEvent("vr_text_click","click","text","' 
+            , get(hotspot[%1].id)
+            ,'","' ,get(hotspot[%1].name) ,'","' 
+            , get(scene[get(xml.scene)].id) 
+            ,'","' ,get(scene[get(xml.scene)].name) ,'",' 
+            ,get(webvr.isenabled) 
+            ,',0,0);' 
+        );
+        jscall(get(sendlog_funcall));  
+        
+        set(checkTextHotspot_funcall,'');
+        txtadd(checkTextHotspot_funcall,'xmlCall.checkTextHotspot("'
+            , get(hotspot[%1].id) ,'","'
+            , get(hotspot[%1].name),'");');
+        jscall(get(checkTextHotspot_funcall));  
+    </action>
+
+    <action protect="true" name="resize_textpanel">    
+        trace("resize_textpanel begin");  
+        if(%1==null, set(hori,true);, set(hori,%1););        
+        trace("resize_textpanel begin, hori=", hori ); 
+
+        if(hori,
+            trace("resize_textpanel heng" );
+            set(layer[textpanel_title].y,"15%");
+          
+            set(layer[textpanel_body_vert].visible,false);
+            set(layer[textpanel_body_hori].visible,true);  
+            
+            set(layer[textpanel_close_top].height,"20%");
+            set(layer[textpanel_close_bottom].height,"40%");
+            set(layer[textpanel_close_left].width,"30%");
+            set(layer[textpanel_close_right].width,"30%");            
+            ,
+            trace("resize_textpanel shu" );
+            set(layer[textpanel_title].y,"20%");
+            
+            set(layer[textpanel_body_vert].visible,true);
+            set(layer[textpanel_body_hori].visible,fals); 
+            
+            set(layer[textpanel_close_top].height,"20%");
+            set(layer[textpanel_close_bottom].height,"40%");
+            set(layer[textpanel_close_left].width,"0");
+            set(layer[textpanel_close_right].width,"0");   
+        ); 
+         trace("resize_textpanel done"); 
+    </action>
+    
+    <action protect="true" name="hide_textpanel">
+        unlock_show_skin();
+        set(layer[textpanel_con].visible,false);
+        jscall("xmlCall.showTextBanner();");
+        sub(duration, timertick, layer[textpanel_con].opentime);
+        roundval(duration, duration, 0);
+        <!--trace(%0, layer[textpanel_con].hotspotid,  layer[textpanel_con].hotspotname, layer[textpanel_con].opentime,"duration=", get(duration) );-->
+        
+        set(sendlog_funcall,'');        
+        txtadd(sendlog_funcall,
+            'sendClickEvent("vr_hotspot_duration","click","text","' 
+            , get(layer[textpanel_con].hotspotid)
+            ,'","' ,get(layer[textpanel_con].hotspotname) ,'","' 
+            , get(scene[get(xml.scene)].id) 
+            ,'","' ,get(scene[get(xml.scene)].name) ,'",' 
+            ,get(webvr.isenabled) 
+            ,',0,'
+            ,get(duration),');' 
+        );
+        jscall(get(sendlog_funcall));     
+        trace("hide_textpanel 1");
+    </action>
+
+    <action protect="true" name="show_gallry">        
+        plugin[swiper].showgallery(get(hotspot[%1].id), 
+            get(hotspot[%1].htitle), 
+            get(hotspot[%1].hlink),
+            get(hotspot[%1].name),0);    
+    
+        set(sendlog_funcall,'');
+        txtadd(sendlog_funcall,
+            'sendClickEvent("vr_image_click","click","text","' 
+            , get(hotspot[%1].id)
+            ,'","' ,get(hotspot[%1].name) ,'","","",' 
+            ,get(webvr.isenabled) 
+            ,',0,0);' 
+        );        
+             
+        jscall(get(sendlog_funcall));
+    </action>
+    <events device="handheld" onresize="onsize();" />
+    <action protect="true" name="onsize">     
+        if(layer[textpanel_con].visible, 
+             if(stagewidth GT stageheight, resize_textpanel(true);,resize_textpanel(false););
+        ); 
+        
+        <!--if(layer[gallery_con].state == 'open', 
+            trace("hide_gallery");
+            unlock_show_skin();
+            if(stagewidth GT stageheight,                
+                make_gallery_hori();
+                ,               
+                make_gallery_vert();
+            );
+        );-->
+    </action>    
+    <action protect="true" name="load_video">         
+         txtadd(play_funcall,'xmlCall.playVideo("', 
+            get(hotspot[%1].id), '","', 
+            %1, '","', 
+            get(hotspot[%1].htitle), '","', 
+            get(hotspot[%1].hlink), '",', 
+            get(device.handheld), ');'); 
+            
+         jscall(get(play_funcall));
+         lock_hide_skin();  
+        
+         set(sendlog_funcall,'');
+         <!--txtadd(sendlog_funcall,'sendClickEvent("vr_video_click","click","video","',get(hotspotid),'","',get(hotspotname),'","',get(sceneid),'","',get(sceneName),'",0);');-->
+        txtadd(sendlog_funcall,
+            'sendClickEvent("vr_video_click","click","text","' 
+            , get(hotspot[%1].id)
+            ,'","' ,get(hotspot[%1].name) ,'","' 
+            , get(scene[get(xml.scene)].id) 
+            ,'","' ,get(scene[get(xml.scene)].name) ,'",' 
+            ,get(webvr.isenabled) 
+            ,',0,0);' 
+        );
+        jscall(get(sendlog_funcall));
+    </action>
+    <action protect="true" name="close_video">  
+        unlock_show_skin();
+        
+        set(sendlog_funcall,'');        
+        txtadd(sendlog_funcall,
+            'sendClickEvent("vr_hotspot_duration","click","video","' 
+            , get(hotspot[%1].id)
+            ,'","' ,%1 ,'","' 
+            , get(scene[get(xml.scene)].id) 
+            ,'","' ,get(scene[get(xml.scene)].name) ,'",' 
+            ,get(webvr.isenabled) 
+            ,',0,'
+            , %2,');' 
+        );
+        jscall(get(sendlog_funcall));     
+        trace("hide_textpanel 1");
+        
+    </action>    
+  
+    <action protect="true" name="hide_hotspots_in_flashmode">        
+        if(device.flash,  
+            for(set(i,0), i LT hotspot.count, inc(i), 
+                 if(hotspot[get(i)].htype==="video" OR hotspot[get(i)].htype==="image",  
+                    set(hotspot[get(i)].visible, false); 
+                );
+            ); 
+        );         
+    </action>
+    <action name="liketexthotspot_click">
+        trace(%0);
+        
+        set(txthotspotclick_funcall,'');
+        txtadd(txthotspotclick_funcall,'xmlCall.likeTextHotspot("'
+            , get(layer[textpanel_con].hotspotid) ,'","'
+            , get(layer[textpanel_con].hotspotname),'");');
+        jscall(get(txthotspotclick_funcall));
+        
+        trace(%0, " ok");
+    </action>
+    <layer name="textpanel_con" type="container" keep="true" visible="false" enabled="true" handcursor="false" y="0" x="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0.7" bgcapture="false" hotspotid="0" hotspotname="" opentime=""> 
+        <layer name="textpanel_title" keep="true" url="%SWFPATH%/plugins/textfield.swf" align="top" x="0" y="20%" html="" visible="true" autoheight="true" background="false"  bgcolor="0x202020" border="false"  css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-size:24px;letter-spacing:2px;" handcursor="false"  capture="true"/>
+
+        <layer name="textpanel_body_vert" devices="handheld" keep="true" url="%SWFPATH%/plugins/textfield.swf" align="top" x="0" y="26%" width="90%" html="" visible="false" autowidth="false" autoheight="true" background="false"  css="color:#FFFFFF; text-align:center;font-family:微软雅黑; font-size:20px;letter-spacing:1px;line-height:30px" wordwrap="true" handcursor="false" capture="true" border="false" bordercolor="0xffffff" borderalpha="1.0" borderwidth="1.0" />
+        
+        <layer name="textpanel_body_hori" devices="handheld" keep="true" url="%SWFPATH%/plugins/textfield.swf" align="topcenter" x="0" y="26%" width="60%" html="" visible="false" autowidth="false" autoheight="true" background="false"  css="color:#FFFFFF; font-family:微软雅黑; font-size:20px;letter-spacing:1px;line-height:30px" wordwrap="true" handcursor="false" capture="true" border="false" bordercolor="0xffffff" borderalpha="1.0" borderwidth="1.0" />
+        
+        <layer name="textpanel_body" devices="!handheld" keep="true" url="%SWFPATH%/plugins/textfield.swf" align="topcenter" x="0" y="26%" width="50%" html="" visible="true" autowidth="false" autoheight="true" background="false"  css="color:#FFFFFF; font-family:微软雅黑; font-size:20px;letter-spacing:1px;line-height:30px" wordwrap="true" handcursor="false" capture="true" border="false" bordercolor="0xffffff" borderalpha="1.0" borderwidth="1.0" />      
+       
+        <layer type="container" name="textpanel_close_top" align="top" x="0" y="0" width="100%" height="20%" bgcolor="0xffffff" bgalpha="0" bgcapture="true" onclick="hide_textpanel"/>
+        <layer type="container" name="textpanel_close_left" align="left" x="0" y="0" width="24%" height="100%" bgcolor="0xffffff" bgalpha="0" bgcapture="true" onclick="hide_textpanel"/>
+        <layer type="container" name="textpanel_close_right" align="right" x="0" y="0" width="24%" height="100%" bgcolor="0xffffff" bgalpha="0" bgcapture="true" onclick="hide_textpanel"/>
+        <layer type="container" name="textpanel_close_bottom" align="bottom" x="0" y="0" width="100%" height="50%" bgcolor="0xffffff" bgalpha="0.0" bgcapture="true" onclick="hide_textpanel" />
+        <layer name="textpanel_close" visible="false" align="righttop" x="24%" y="20%" width="30" height="30" keep="true" zorder="99" onclick="hide_textpanel()" url="%SWFPATH%/autoskin/skinpng/close.png"/>
+        
+        <layer name="textpanellike_con" visible="false" type="container" align="rightbottom" x="50" y="50" width="110" height="50" onover="set(alpha,0.8);" onout="set(alpha,1.0);" scalechildren="true" bgcolor="0x000000" bgalpha="0.0">
+            <layer name="textpanellike_btn" align="lefttop" width="50" height="50" url="%SWFPATH%/autoskin/skinpng/icon-like.png" onclick="liketexthotspot_click();"/>
+            <layer name="textpanellike_txt" align="lefttop" x="60" y="10" width="50" height="50" url="%SWFPATH%/plugins/textfield.swf" background="false" zorder="70" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-size:22px; letter-spacing:0px;" textshadow="1" html="0" />
+        </layer>
+      
+    </layer>    
+</krpano>

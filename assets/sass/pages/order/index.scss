@@ -1,0 +1,529 @@
+@charset "UTF-8";
+
+// 确认订单
+.confirmation-order {
+  margin-bottom: 100px;
+  padding: 0 30px;
+
+  //头部
+  .order-header {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    .iconfont {
+      font-size: 30px;
+      width: 30px;
+      height: 29px;
+      font-weight: 600;
+      color: #848181;
+    }
+
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  > .order-information{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    .title{
+      padding: 20px 0;
+    }
+    img{
+      width: 100%;
+    }
+   .text{
+     padding: 35px 0px;
+     line-height: 20px;
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+      font-size: 16px;
+      color: #666666;
+    }
+   }
+  }
+
+  // 商品配置
+  > .commodity-allocation{
+     padding: 35px 0;
+     border-bottom: 0.01333rem solid #ddd;
+     .line{
+      width: 100%;
+      height: 35px;
+      padding: 15px 0;
+     }
+     .textword{
+       font-size: 30px;
+     }
+     .text{
+       font-size: 25px;
+       display: inline-block;
+     }
+     .left{
+       float: left;
+     }
+     .right{
+      float: right;
+    }
+    .weight{
+      // font-weight: 600;
+      font-size: 25px;
+      // line-height: 30px;
+    }
+    .brown{
+      // color: #d5b17a;
+      font-size: 25px;
+    }
+    .font{
+      font-size: 25px;
+    }
+    .gray{
+      margin-left: 15px;
+      padding-bottom: 3px;
+      font-size: 25px;
+      color: #999999;
+    }
+     // 经销商
+   > .distributor {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    // padding-bottom: 50px;
+    // border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    // 省 市
+    > .province-select, > .city-select {
+      position: relative;
+      display: inline-block;
+      height: 64px;
+      width: 330px;
+      line-height: 64px;
+      padding: 0 60px 0 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      // font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > span {
+        color: #b9b9b9;
+        font-size: 24px;
+        @include multi-line-display(1);
+      }
+
+      > i {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 28px;
+      }
+    }
+     // 店名 地址
+     > .shop-select, > .address-select {
+      position: relative;
+      height: 64px;
+      width: 670px;
+      line-height: 64px;
+      padding: 0 60px 0 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      // font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > span {
+        color: #b9b9b9;
+        font-size: 24px;
+        @include multi-line-display(1);
+      }
+
+      > i {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 28px;
+      }
+    }
+    .city-select {
+      margin-right: 0;
+      float: right;
+    }
+
+    // 搜索
+    > .distributor-search {
+      height: 64px;
+      line-height: 64px;
+      margin-top: 20px;
+
+      > .edit {
+        height: 64px;
+        line-height: 64px;
+        padding: 0 20px;
+        border-radius: 5px;
+        border: solid 2px #999999;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+
+        > input {
+          display: block;
+          width: 100%;
+          // line-height: 60px;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 15px;
+          border: none;
+          font-size: 22px;
+          font-weight: 400;
+          color: #000000;
+          box-sizing: border-box;
+          @include multi-line-display(1);
+        }
+      }
+      > .search-btn {
+        width: 220px;
+        height: 64px;
+        line-height: 64px;
+        margin-left: 20px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #d3b07a;
+        box-sizing: border-box;
+        zoom: 1;
+
+        > i {
+          display: block;
+          height: 64px;
+          line-height: 64px;
+          font-size: 30px;
+          font-weight: 600;
+          color: #ffffff;
+        }
+      }
+    }
+
+    // 特约店
+    > .special-shop-list {
+      display: block;
+      margin-top: 20px;
+
+      > .shop-item {
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+
+        > .icon {
+          line-height: 40px;
+          margin-right: 20px;
+
+          > i {
+            display: block;
+            line-height: 40px;
+            font-size: 30px;
+            color: rgba(2, 2, 2, .1);
+          }
+        }
+        > .name {
+          font-size: 28px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30px;
+          letter-spacing: 1px;
+          color: #000000;
+        }
+
+        &.checked {
+          > .icon {
+            > i {
+              color: #d3b07a;
+            }
+          }
+          > .name {
+            color: #d3b07a;
+          }
+
+        }
+      }
+    }
+
+    // 展开更多
+    > .open-more {
+      margin: 60px 40px 0 40px; // 100px
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 1px;
+      color: #d3b078;
+    }
+  }
+  }
+  > .test-drive-btn {
+    width: 280px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 26px;
+    background-color: #d3b078;
+    color: #ffffff;
+    margin: 50px 0px 50px 400px;
+
+    > i {
+      margin-right: 12px;
+      font-size: 26px;
+    }
+  }
+  > .footer{
+    display: block;
+    margin-top: 50px;
+    padding-bottom: 80px;
+    .left{
+      float: left;
+      font-size: 30px;
+      font-weight: 600;
+      color: #999999;
+      margin-left: 10px;
+    }
+    .leftActive{
+      float: left;
+      font-size: 30px;
+      font-weight: 600;
+      color: #d2b179;
+      margin-left: 10px;
+    }
+    .right{
+      float: right;
+      font-size: 30px;
+      font-weight: 600;
+      color: #999999;
+      margin-right: 10px;
+    }
+    .rightActive{
+      float: right;
+      font-size: 30px;
+      font-weight: 600;
+      color: #d2b179;
+      margin-right: 10px;
+    }
+
+  }
+  > .footer-line{
+    width: 100%;
+    height: 20px;
+    background: #e5e5e5;
+    margin-bottom: 40px;
+  }
+  .img{
+    img{
+      width: 100%;
+    }
+  }
+  // 提车人
+  .lift-man {
+    // margin: 0 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    > .lift-man-title {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+
+    // 输入框
+    > .input-edit {
+      height: 64px;
+      line-height: 64px;
+      padding: 0 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: solid 2px #999999;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+
+      > input {
+        display: block;
+        width: 100%;
+        // line-height: 60px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+        border: none;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+        box-sizing: border-box;
+        @include multi-line-display(1);
+      }
+    }
+
+    // 提示信息
+    > .lift-man-tip {
+      line-height: 30px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #999999;
+    }
+  }
+    // 支付方式
+    .payment-method {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+      > .payment-title {
+        margin-bottom: 40px;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: #000000;
+      }
+
+      // 选择支付方式
+      > .payment-select {
+        position: relative;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 0 0 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: solid 2px #999999;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+
+        > span {
+          font-size: 22px;
+          color: #000000;
+          @include multi-line-display(1);
+        }
+
+        > i {
+          position: absolute;
+          top: 0;
+          right: 30px;
+          font-size: 28px;
+        }
+      }
+    }
+
+    // 支付金额
+    .amount-payment {
+      //margin: 0 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+      > .amount-item {
+        text-align: right;
+        font-size: 28px;
+        font-weight: 600;
+        color: #000000;
+
+        &:last-child {
+          margin-top: 26px;
+        }
+
+        > span {
+          color: #ceb181;
+
+          &:first-child {
+            font-size: 24px;
+            letter-spacing: 2px;
+          }
+          &:last-child {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+
+    // 服务条款
+    .service-provision {
+      // margin: 0 40px;
+      padding-top: 60px;
+      text-align: center;
+      > .icon {
+        line-height: 40px;
+        // margin-right: 20px;
+        margin-left: .4rem;
+        > i {
+          display: block;
+          line-height: 40px;
+          font-size: 30px;
+          font-weight: 400;
+          color: rgba(2, 2, 2, .1);
+        }
+      }
+      > .name {
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #000000;
+        >span {
+          color: #d3b07a;
+        }
+      }
+
+      &.checked {
+        > .icon {
+          > i {
+            color: #d3b07a;
+          }
+        }
+        > .name {
+          color: #000000;
+        }
+
+      }
+    }
+
+    // 提交按钮
+    .submit-btn {
+      width: 650px;
+      height: 80px;
+      line-height: 80px;
+      margin: 40px auto 0 auto;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 12px;
+      background-color: #d3b07a;
+      color: #ffffff;
+
+      > i {
+        margin-right: 30px;
+        font-size: 24px;
+        color: #fffffe;
+      }
+    }
+  // .text{
+  //   .title{
+  //     color: #d1b27b;
+  //     font-size: 20px;
+  //     font-weight: 600;
+  //     margin-bottom: 10px;
+  //   }
+  //   .content{
+  //     color: #333333;
+  //     font-size: 20px;
+  //   }
+  // }
+}

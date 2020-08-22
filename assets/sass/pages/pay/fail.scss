@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// 支付失败
+.fail-container {
+  margin-bottom: 100px;
+
+  // 支付结果
+  > .pay-result {
+    margin: 0 60px;
+    // 图标
+    > .pay-fail-icon {
+      display: block;
+      width: 110px;
+      height: 110px;
+      margin: 56px auto 60px auto;
+      border-radius: 100%;
+      font-size: 110px;
+      color: #e50020;
+    }
+
+    > .fail-tip {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      color: #d3b078;
+    }
+
+    > .pay-tip {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 40px;
+      color: #d3b078;
+    }
+  }
+
+  // 再次支付
+  .pay-again-btn {
+    height: 70px;
+    line-height: 70px;
+    margin: 150px 40px 50px 40px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 12px;
+    color: #fefefe;
+    background-color: #d3b07a;
+  }
+
+  // 温馨提示
+  .reminder {
+    line-height: 36px;
+    margin: 0 50px;
+    text-align: center;
+    font-size: 22px;
+    color: #a0a0a0;
+  }
+}
+
+

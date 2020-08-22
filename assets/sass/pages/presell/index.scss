@@ -1,0 +1,31 @@
+@charset "UTF-8";
+// 新车预售
+.presell-container {
+  margin-bottom: 100px;
+
+  // 主图
+  .maim-pic {
+    padding-top: 1.3rem;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+    &.policy {
+      padding-top: 0;
+    }
+  }
+
+  .bright-points-list {
+    margin: 0 40px;
+    p {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+

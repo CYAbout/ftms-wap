@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+// mint-ui 样式重置
+// Message box
+.mint-msgbox-wrapper {
+  z-index: 3000;
+
+  > .mint-msgbox {
+    width: 500px;
+    // height: 280px;
+    > .mint-msgbox-header {
+      padding: 30px 0 0 0;
+      > .mint-msgbox-title {
+        font-size: 30px;
+      }
+    }
+
+    > .mint-msgbox-content {
+      padding: 40px 0;
+      border:none;
+      > .mint-msgbox-message {
+        font-size: 26px;
+      }
+    }
+
+    > .mint-msgbox-btns {
+      height: 60px;
+      line-height: 60px;
+      padding:20px;
+      display:flex;
+      > .mint-msgbox-btn {
+        font-size: 26px;
+        border-radius:30px;
+        +.mint-msgbox-btn{
+          margin-left:20px;
+        }
+        &.mint-msgbox-cancel {
+          // margin-right: 1px;
+          // border-right-width: 2px;
+          background-color:#D0AF7D;
+          color:#fff;
+        }
+         &.mint-msgbox-confirm {
+           border:1px solid #bbb;
+           color:#222;
+        }
+      }
+    }
+  }
+}
+
+// Indicator
+.mint-indicator {
+  z-index: 3000;
+  > .mint-indicator-wrapper {
+    > .mint-indicator-spin {
+      padding: 10px 40px;
+    }
+    > .mint-indicator-text {
+      font-size: 26px;
+    }
+  }
+}
+
+// Toast
+.mint-toast {
+  width: auto;
+  max-width: 640px;
+  min-width: 400px;
+  z-index: 3000;
+
+  > .mint-toast-icon {
+    font-size: 70px;
+  }
+  > .mint-toast-text {
+    line-height: 40px;
+    // padding: 0 20px;
+    font-size: 26px;
+  }
+}
+
+// input 边框
+input {
+  border-color: #ffffff;
+  border: none;
+  box-sizing: border-box;
+  zoom: 1;
+}

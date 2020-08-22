@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+// 恭喜
+.congratulations-layer {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  //noinspection CssUnknownTarget
+  background-image: url("~/assets/images/order_pay/congratulations_pop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent !important;
+
+  &.mint-popup {
+    position: fixed;
+    display: block;
+    width: 100%;
+    //noinspection CssUnknownTarget
+    background-image: url("~/assets/images/order_pay/congratulations_pop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent !important;
+  }
+
+  > .congratulations-content {
+    position: relative;
+    width: 670px;
+    min-height: 932px;
+    margin: 58px auto 0 auto;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    background-color: transparent;
+
+    // 头部
+    > .congratulat-header {
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 8px 8px 0px 0px;
+      // background-color: #d3b078;
+
+      > .title {
+        padding-top: 44px;
+        text-align: center;
+        font-size: 45px;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+
+      > .sub-title {
+        margin-top: 6px;
+        text-align: center;
+        font-family: SourceHanSansCN-Regular;
+        font-size: 26px;
+        letter-spacing: 3px;
+        color: #ffffff;
+        opacity: 0.87;
+      }
+
+      > .decoration {
+        display: block;
+        width: 204px;
+        height: 24px;
+        margin: 8px auto;
+      }
+    }
+
+    > .congratulat-content {
+      margin: 40px 48px 0 48px;
+      background-color: #ffffff;
+
+      > .title {
+        line-height: 40px;
+        margin-left: 52px;
+        margin-bottom: 26px;
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #070002;
+
+        > span {
+          padding-bottom: 5px;
+          border-bottom: 3px solid #000;
+        }
+      }
+      > p {
+        line-height: 46px;
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #070002;
+        text-indent: 50px;
+
+        &:last-child {
+          padding-top: 10px;
+        }
+
+        > span {
+          font-size: 30px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    // 签约单号
+    > .sign-number {
+      width: 564px;
+      height: 90px;
+      line-height: 90px;
+      margin: 40px auto 0 auto;
+      //noinspection CssUnknownTarget
+      background-image: url("~/assets/images/order_pay/sign_bg.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #000000;
+    }
+
+    // 尾部
+    .congratulat-footer {
+      margin: 30px 40px 0 40px;
+      height: 108px;
+      // line-height: 108px;
+      background-color: #ffffff;
+
+      > .footer-logo {
+        > img {
+          display: block;
+          width: 236px;
+          height: 40px;
+          margin-top: 34px;
+        }
+      }
+      > .footer-seal {
+        position: relative;
+        width: 220px;
+        > img {
+          display: block;
+          width: 108px;
+          height: 108px;
+          margin: 0 auto;
+        }
+
+        > .date {
+          position: absolute;
+          bottom: 10px;
+          width: 220px;
+          text-align: center;
+          font-size: 16px;
+          color: #000000;
+        }
+      }
+    }
+
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    // bottom: -140px;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

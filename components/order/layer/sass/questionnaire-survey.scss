@@ -1,0 +1,200 @@
+// 问卷调查
+.questionnaire-survey-layer {
+  position: fixed;
+  // top: 20px;
+  top: 50px;
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+
+  &.mint-popup {
+    position: fixed;
+    // top: 20px;
+    top: 120px;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .questionnaire-content {
+    position: relative;
+    height: 11rem;
+    min-height: 11rem;
+    margin: 0 40px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    > .left {
+      position: absolute;
+      top: -50px;
+      left: -40px;
+      width: 98px;
+      height: 118px;
+    }
+
+    > .right {
+      position: absolute;
+      top: -20px;
+      right: -40px;
+      width: 54px;
+      height: 126px;
+    }
+
+    // 标题
+    > .questionnaire-titles {
+      margin-top: 36px;
+      height: 130px;
+      //noinspection CssUnknownTarget
+      background-image: url("~/assets/images/survey/group.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      > .clip {
+        position: absolute;
+        top: -36px;
+        left: 50%;
+        width: 140px;
+        height: 54px;
+        margin-left: -70px;
+      }
+
+      > .title {
+        line-height: 40px;
+        // padding-top: 24px;
+        padding-top: 44px;
+        text-align: center;
+        font-size: 32px;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+
+      > .sbu-title {
+        margin-top: 6px;
+        text-align: center;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+    }
+
+    // 问卷列表
+    > .questionnaire-lists {
+      height: 7.7rem;
+      line-height: 36px;
+      margin: 30px 26px 0 26px;
+      padding: 0;
+      font-size: 24px;
+      color: #333333;
+      overflow-y: auto;
+      @include hide-scrollbar;
+
+      > .question-item {
+        margin-top: 60px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        > .question {
+          line-height: 36px;
+
+          > i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: red;
+          }
+          > span {
+            font-size: 28px;
+            font-weight: 600;
+            color: #000000;
+          }
+        }
+        // 说明
+        > .explain {
+          line-height: 40px;
+          margin-top: 20px;
+          margin-left: 10px;
+          font-size: 28px;
+          font-weight: 600;
+          color: #000000;
+        }
+        > .answer-list {
+          > .answer-item {
+            line-height: 36px;
+            margin-top: 36px;
+
+            > .check-icon {
+              width: 30px;
+              margin-right: 22px;
+              font-size: 30px;
+              color: rgba(0, 0, 0, .1);
+
+              &.checked {
+                color: #d3b07a;
+              }
+            }
+            > .check-name {
+              line-height: 36px;
+              margin-right: 20px;
+              font-size: 28px;
+              color: #333333;
+            }
+            > .check-input {
+              display: block;
+              // line-height: 36px;
+
+              > .edit-input {
+                display: block;
+                width: 100%;
+                padding-bottom: 5px;
+                font-size: 26px;
+                border-bottom: 2px solid rgba(0, 0, 0, .1);
+              }
+            }
+
+            &.no-check {
+              > .check-name {
+                margin-left: 30px;
+              }
+              > .check-input {
+                margin-left: 30px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .submit-btn {
+      width: 300px;
+      height: 70px;
+      line-height: 70px;
+      margin: 12px auto;
+      background-color: #d3b07a;
+      border-radius: 35px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 12px;
+      color: #ffffff;
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -(54px + 74px);
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+// 扫码支付
+.qrcode-layer {
+  width: 600px;
+  min-height: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  .qrcode-content {
+    position: relative;
+    margin-top: 88px;
+
+    > .qrcode-pic {
+      display: block;
+      width: 402px;
+      height: 402px;
+      margin: 0 auto;
+    }
+
+    > .scan-tip {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: #333333;
+    }
+
+    > .pay-tip {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: #333333;
+
+      > span {
+        color: #d3b07a;
+      }
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -180px;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

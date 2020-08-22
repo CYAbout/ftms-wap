@@ -1,0 +1,64 @@
+// 设置密码成功
+.set-success-layer {
+  width: 670px;
+  min-height: 614px;
+  height: auto;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+  // 重置密码编辑区
+  .set-success-content {
+    > .set-success-title {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 45px;
+      letter-spacing: 5px;
+      color: #000000;
+    }
+
+    > .icon {
+      display: block;
+      width: 134px;
+      height: 134px;
+      margin: 60px auto 0 auto;
+      font-size: 134px;
+      color: #ceb181;
+    }
+
+    > .success-tip {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: #ceb181;
+    }
+
+    > .complete-btn {
+      width: 510px;
+      height: 70px;
+      line-height: 70px;
+      margin: 40px auto 0 auto;
+      border-radius: 35px;
+      text-align: center;
+      font-size: 26px;
+      letter-spacing: 26px;
+      color: #ffffff;
+      background-color: #d3b078;
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -(54px + 74px);
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

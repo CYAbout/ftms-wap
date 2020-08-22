@@ -1,0 +1,198 @@
+
+<krpano version="1.19" >   
+    <hotspot name="nadirlogo" keep="true" style="nadirlogo" visible="false" scale="1.5"/>
+    <hotspot name="vrgobackhall" devices="handheld" keep="true" style="gobackhall"  visible="false" scale="1" onclick="goback();"/>
+    <contextmenu keep="true" fullscreen="true" enterfs="全屏" exitfs="退出全屏" separator="true" >        
+    </contextmenu>
+    
+    <layer name="top_skin_control_bar" keep="true" visible="true" type="container" bgcolor="0x000000" bgalpha="0" align="lefttop" width="100%" height="110" x="0" y="0"  zorder="4" scalechildren="true">
+        <layer devices="!handheld" name="goback_con" onover="set(alpha,0.8);" onout="set(alpha,1.0);" align="lefttop" width="60" height="60" scalechildren="true" bgcolor="0x000000" bgalpha="0.0" type="container" x="20" y="20" visible="false" >
+            <layer name="goback_btn" width="60" height="60"  align="topcenter" url="%SWFPATH%/autoskin/skinpng/back.png" onclick="goback();"/>
+        </layer>
+        <layer devices="handheld" name="goback_con" onover="set(alpha,0.8);" onout="set(alpha,1.0);" align="lefttop" width="60" height="60" scalechildren="true" bgcolor="0x000000" bgalpha="0.0" type="container" x="10" y="20" visible="false" >
+            <layer name="goback_btn" width="60" height="60"  align="topcenter" url="%SWFPATH%/autoskin/skinpng/back.png" onclick="goback();"/>
+        </layer>
+        <layer devices="!handheld" name="skin_intro" type="container" keep="true" visible="false" align="lefttop" x="34" y="19" height="78" width="365" bgcolor="0x202020" bgalpha="0.0" maskchildren="true" bgroundedge="10" zorder="79" handcursor="false" scale="1.0" scalechildren="true">
+            <layer name="skin_intro-bg" type="image" url="%SWFPATH%/autoskin/skinpng/intro-bg.png" y="0" align="top" width="100%" height="100" handcursor="false"/>
+            <layer name="introtext1" align="top" x="-10" y="6" style="intro_style" html="" width="10" bgcolor="0xff0000" bgalpha="0.0" handcursor="false"/>
+            <layer name="introtext2" align="bottom" x="-10" y="12" style="intro_style" html="" bgcolor="0xff0000" bgalpha="0.0" width="10" handcursor="false" />
+        </layer>
+        <layer devices="handheld" name="skin_intro" type="container" keep="true" visible="false" align="top" x="10" y="26" height="70" width="365" bgcolor="0x202020" bgalpha="0.0" maskchildren="true" bgroundedge="10" zorder="79" handcursor="false" scale="1.0" scalechildren="true">
+            <layer name="skin_intro-bg" type="image" url="%SWFPATH%/autoskin/skinpng/intro-bg.png" y="0" align="top" width="100%" height="84" handcursor="false"/>
+            <layer name="introtext1" align="top" x="-10" y="6" style="intro_style1" html="" width="10" bgcolor="0xff0000" bgalpha="0.0" handcursor="false"/>
+            <layer name="introtext2" align="bottom" x="-10" y="15" style="intro_style1" html="" bgcolor="0xff0000" bgalpha="0.0" width="10" handcursor="false" />
+        </layer>       
+    </layer>   
+    
+    <layer devices="!handheld" name="skin_loadingtext"  keep="true" url="%SWFPATH%/plugins/textfield.swf" align="top" x="0" y="20" html="图片加载中..." visible="false" autoheight="true" background="false" border="false" enabled="false" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-weight:bold; font-size:22px;" textshadow="2" />
+    <layer devices="handheld" name="skin_loadingtext"  keep="true" url="%SWFPATH%/plugins/textfield.swf" align="center" x="0" y="0" html="图片加载中..." visible="false" autoheight="true" background="false" border="false" enabled="false" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-weight:bold; font-size:22px;" textshadow="2" />
+    
+    <style name="public_text_style" keep="true" url="%SWFPATH%/plugins/textfield.swf" background="false" align="leftbottom" bgalpha="0" zorder="70" css="text-align:center; color:#FFFFFF; font-family:黑体; font-size:12px; letter-spacing:2px;"/>
+
+    <style name="scene_style" url="%SWFPATH%/plugins/textfield.swf" background="false" zorder="70" css="text-align:center; color:#ffffff; font-family:微软雅黑; font-size:30px; letter-spacing:2px;" />
+    <layer name="skin_top_scene_name" type="container" keep="true" align="topcenter" y="-100" width="129" height="61" bgcolor="0x1d1c1d" bgalpha="0.0" maskchildren="false" handcursor="false" scale="1" scalechildren="true">
+        <layer name="skin_scenename_bg" type="image" url="%SWFPATH%/autoskin/skinpng/scenename-bg.png" y="0" align="topleft" width="100%" height="61" handcursor="false"/>
+        <layer name="top_scene_name" align="topleft" x="11" y="-1" width="92" style="scene_style" html="" handcursor="false"/>
+    </layer>   
+
+    <style name="intro_style1" url="%SWFPATH%/plugins/textfield.swf" background="false" padding="2 5 2 5" wordwrap="false" autowidth="true" zorder="70" css="text-align:center; color:#c6c6c6; font-family:微软雅黑; font-size:18px; letter-spacing:0px;" onautosized="introresize();"/>
+    <style name="intro_style" url="%SWFPATH%/plugins/textfield.swf" background="false" padding="2 5 2 5" wordwrap="false" autowidth="true" zorder="70" css="text-align:center; color:#c6c6c6; font-family:微软雅黑; font-size:22px; letter-spacing:0px;" onautosized="introresize();"/>
+    <!--<layer devices="!handheld" name="skin_intro" type="container" keep="true" visible="false" align="lefttop" x="34" y="19" height="78" width="365" bgcolor="0x202020" bgalpha="0.0" maskchildren="true" bgroundedge="10" zorder="79" handcursor="false" scale="1.0" scalechildren="true">
+        <layer name="skin_intro-bg" type="image" url="%SWFPATH%/autoskin/skinpng/intro-bg.png" y="0" align="top" width="100%" height="100" handcursor="false"/>
+        <layer name="introtext1" align="top" x="-10" y="6" style="intro_style" html="" width="10" bgcolor="0xff0000" bgalpha="0.0" handcursor="false"/>
+        <layer name="introtext2" align="bottom" x="-10" y="12" style="intro_style" html="" bgcolor="0xff0000" bgalpha="0.0" width="10" handcursor="false" />
+    </layer>
+    <layer devices="handheld" name="skin_intro" type="container" keep="true" visible="false" align="top" x="10" y="19" height="78" width="365" bgcolor="0x202020" bgalpha="0.0" maskchildren="true" bgroundedge="10" zorder="79" handcursor="false" scale="1.0" scalechildren="true">
+        <layer name="skin_intro-bg" type="image" url="%SWFPATH%/autoskin/skinpng/intro-bg.png" y="0" align="top" width="100%" height="100" handcursor="false"/>
+        <layer name="introtext1" align="top" x="-10" y="6" style="intro_style" html="" width="10" bgcolor="0xff0000" bgalpha="0.0" handcursor="false"/>
+        <layer name="introtext2" align="bottom" x="-10" y="12" style="intro_style" html="" bgcolor="0xff0000" bgalpha="0.0" width="10" handcursor="false" />
+    </layer>-->
+    <layer name="skin_start_help" devices="!handheld" keep="true" visible="false" type="image" maxwidth="1000" maxheight="600" width="200" height="prop" align="center" url="%SWFPATH%/autoskin/skinpng/starthelp.png" handcursor="false" scale="1" scalechildren="true"/>    
+    <layer name="bar_start_tip" devices="!handheld" type="container" keep="true" visible="false" align="topcenter" y="30" width="610" height="200"  maskchildren="true">
+        <layer name="bar_start_tip_bg" type="image" url="%SWFPATH%/autoskin/skinpng/start-tip.png" x="0" y="0" align="topleft" width="100%" height="prop" handcursor="false"/>
+    </layer>
+    
+    <layer devices="!handheld" name="skin_visit_info" keep="true" visible="false" type="container" align="topright" bgcolor="0x000000" x="10" y="128" bgalpha="0.2" width="108" height="25" bgroundedge="3" handcursor="false">
+        <layer align="rightbottom" x="0" y="4" width="107" height="21" type="container" bgcolor="0x000000" bgalpha="0.0" handcursor="false">
+            <layer name="skin_visit_text" style="public_text_style" align="top" css="text-align:center;color:#FFFFFF;font-family:微软雅黑;font-size:14px;" html="人气:1" width="100%" handcursor="false"/>
+        </layer>
+    </layer>
+
+    <style name="menubar_btn_con" onover="set(alpha,0.8);" onout="set(alpha,1.0);" align="leftbottom" width="70" height="75" scalechildren="true" bgcolor="0x000000" bgalpha="0.0"/>
+    <style name="menubar_btn_style" align="topcenter" width="50" height="50"/>
+    <style name="menubar_text_style" align="bottomcenter" y="0" url="%SWFPATH%/plugins/textfield.swf" background="false" zorder="70" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-size:16px; letter-spacing:0px;" textshadow="1"/>
+    <style name="menubar_text_style_sel" align="bottomcenter" y="0" width="100%" url="%SWFPATH%/plugins/textfield.swf" background="false" zorder="70" css="text-align:center; color:#f4b40d; font-family:微软雅黑; font-size:16px; letter-spacing:0px;" textshadow="1"/>
+
+    <!-- <layer name="showbar_con" style="menubar_btn_con" type="container" keep="true" visible="false" y="20" x="20"  bgcolor="0x000000" bgalpha="0">
+        <layer name="showbar_btn"  align="top" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-show.png" onclick="skin_show_ui_click();"/>
+        <layer name="showbar_text" align="bottom" style="menubar_text_style" html="显示" onclick="skin_show_ui_click();"/>
+    </layer> -->
+ 
+    <!-- <layer devices="!handheld" name="skin_control_bar" keep="true" visible="false" type="container" bgcolor="0x000000" bgalpha="0" align="leftbottom" width="100%" height="110" x="0" y="20"  zorder="4" scalechildren="true">
+        <layer name="hidebar_con" style="menubar_btn_con" type="container" x="20" y="0" >
+            <layer name="hidebar_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-hide.png" onclick="skin_hide_ui_click();"/>
+            <layer name="hidebar_txt"  style="menubar_text_style" html="隐藏" onclick="skin_hide_ui_click();"/>
+        </layer>
+        <layer name="fullscreen_con" style="menubar_btn_con" type="container" x="90" y="0" >
+            <layer name="fullscreen_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-fullscreen.png" onclick="swtich_fullscreen();"/>
+            <layer name="fullscreen_txt" style="menubar_text_style" html="全屏" onclick="swtich_fullscreen();"/>
+        </layer>
+        <layer name="skin_btn_thumbs_con" style="menubar_btn_con" type="container"  x="160"  y="0">
+            <layer name="skin_btn_thumbs" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-thumbs.png" onclick="showthumbs_click();"/>
+            <layer name="skin_btn_thumbs_txt" style="menubar_text_style" html="场景" onclick="showthumbs_click();"/>
+        </layer>
+        <layer name="ext_con" style="menubar_btn_con" type="container"  x="300"  y="0" visible="false">
+            <layer name="ext_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/transform-3x.png" onclick="ext_click();"/>
+            <layer name="ext_txt" style="menubar_text_style" html="外观" onclick="ext_click();"/>
+        </layer>
+        <layer name="price_con" style="menubar_btn_con" type="container" align="rightbottom" x="160" y="0">
+            <layer name="price_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-price.png" onclick="open_price()"/>
+            <layer name="price_txt" style="menubar_text_style" html="询价" onclick="open_price()"/> 
+        </layer>
+        <layer name="skin_btn_sound_con" style="menubar_btn_con" type="container"  x="230"  y="0">
+            <layer name="skin_btn_sound" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-stopsound.png" onclick="togglemusicplay();"/>
+            <layer name="skin_btn_sound_txt" style="menubar_text_style" html="音乐" onclick="togglemusicplay();"/>
+        </layer>        
+        <layer name="feedback_con" style="menubar_btn_con" type="container" align="rightbottom" x="90" y="0">
+            <layer name="feedback_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-feedback.png" onclick="open_feedback()"/>
+            <layer name="feedback_txt" style="menubar_text_style" html="反馈" onclick="open_feedback()"/> 
+        </layer>        
+        <layer name="like_con" style="menubar_btn_con" type="container" align="rightbottom" x="20" y="0">
+            <layer name="like_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-like.png" onclick="like_click();"/>
+            <layer name="like_txt" style="menubar_text_style" html="0" onclick="like_click();"/>
+        </layer>
+    </layer>
+    <layer devices="handheld"  name="skin_control_bar" keep="true" visible="false" type="container" bgcolor="0x000000" bgalpha="0.0" align="leftbottom" width="100%" height="110" x="0" y="20" zorder="4" scalechildren="true">
+        <layer name="hidebar_con" style="menubar_btn_con" type="container" x="20" y="0" >
+            <layer name="hidebar_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-hide.png" onclick="skin_hide_ui_click();"/>
+            <layer name="hidebar_txt"  style="menubar_text_style" html="隐藏" onclick="skin_hide_ui_click();"/>
+        </layer>
+        <layer name="mode_con" type="container" style="menubar_btn_con" x="90">
+            <layer name="gyro_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-gyro.png" onclick="skin_switch_gyro();"/>
+            <layer name="gyro_txt" style="menubar_text_style" html="陀螺仪" onclick="skin_switch_gyro();"/>
+        </layer>
+        <layer devices="mobile" name="aavrglasses_con" type="container" style="menubar_btn_con" x="160" visible="true">
+            <layer name="aavrglasses_btn" style="menubar_btn_style"  url="%SWFPATH%/autoskin/skinpng/icon-vr.png" onclick="uientervr();"/>
+            <layer name="aavrglasses_txt" style="menubar_text_style" html="VR" onclick="uientervr();"/>
+        </layer>
+        <layer name="ext_con" style="menubar_btn_con" type="container"  x="230"  y="0" visible="false">
+            <layer name="ext_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/transform-3x.png" onclick="ext_click();"/>
+            <layer name="ext_txt" style="menubar_text_style" html="外观" onclick="ext_click();"/>
+        </layer>
+        <layer name="price_con" style="menubar_btn_con" type="container" align="rightbottom" x="90" y="0">
+            <layer name="price_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-price.png" onclick="open_price()"/>
+            <layer name="price_txt" style="menubar_text_style" html="询价" onclick="open_price()"/>             
+        </layer>
+        <layer name="like_con" type="container" align="rightbottom" style="menubar_btn_con" x="20">
+            <layer name="like_btn" style="menubar_btn_style" url="%SWFPATH%/autoskin/skinpng/icon-like.png" onclick="like_click();"/>
+            <layer name="like_txt" style="menubar_text_style" html="0" onclick="like_click();"/>
+        </layer>
+    </layer> -->
+
+     <layer devices="!handheld" name="skin_scroll_window" type="container" keep="true" align="lefttop" width="100%" height="100%" x="0" y="-80%" maskchildren="true" bgcolor="0xFF0000" bgalpha="0.0" visible="true" zorder="70" handcursor="false">
+        <layer name="skin_scroll_layer" type="container" align="leftbottom" width="100%" height="100%" x="0" y="-100%" bgcolor="0x0033FF" bgalpha="0" visible="true"  handcursor="false">
+            <layer name="skin_scroll_container" type="container" visible="true" bgcolor="0x042057" bgalpha="0.0" align="lefttop" width="100%" height="100%" x="0" y="0" maskchildren="true" handcursor="false">
+                <layer name="skin_thumbs_container" type="container" align="lefttop" width="100%" height="100%" visible="true" handcursor="false" zorder="79">
+                    <layer name="skin_thumbs_scrollindicator" type="container" bgcolor="0xFFFFFF" bgalpha="0.25" align="lefttop" width="0" y="100" height="4" visible="false" enabled="false" />
+                    <layer name="skin_thumbs" state="closed" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" direction="h" align="top" onhover_autoscrolling="false" width="100%" height="92" x="0" onloaded="skin_updatescroll();" onscroll="skin_updatethumbscroll();" zorder="79"/>
+                </layer>
+                <layer name="skin_thumbg_con" type="container" align="centertop" width="40%" height="100" bgcolor="0x000000" bgalpha="0" maskchildren="true" handcursor="false" zorder="0">
+                    <layer name="skin_thumbg" type="image" url="%SWFPATH%/autoskin/skinpng/thumbar-bg.png" y="0" align="top" width="100%" height="100" handcursor="false"/>
+                </layer>              
+            </layer>
+        </layer>
+    </layer>
+
+
+    <layer devices="handheld" name="skin_scroll_window" type="container" keep="true" align="leftbottom" width="100%" height="100%" x="0" y="110" maskchildren="true" bgcolor="0xFF0000" bgalpha="0.0" visible="true" zorder="70" handcursor="false">
+        <layer name="skin_scroll_layer" type="container" align="leftbottom" width="100%" height="100%" x="0" y="-100%" bgcolor="0x0033FF" bgalpha="0" visible="true"  handcursor="false">
+            <layer name="skin_scroll_container" type="container" visible="true" bgcolor="0x042057" bgalpha="0.0" align="lefttop" width="100%" height="100%" x="0" y="0" maskchildren="true" handcursor="false">
+                <layer name="skin_thumbs_container" type="container" align="lefttop" width="100%" height="100%" visible="true" handcursor="false" zorder="79">
+                    <layer name="skin_thumbs_scrollindicator" type="container" bgcolor="0xFFFFFF" bgalpha="0.25" align="lefttop" width="0" y="100" height="4" visible="false" enabled="false" />
+                    <layer name="skin_thumbs" state="closed" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" direction="h" align="top" onhover_autoscrolling="false" width="100%" height="92" x="0" onloaded="skin_updatescroll();" onscroll="skin_updatethumbscroll();" zorder="79"/>
+                </layer>
+                <layer name="skin_thumbg_con" type="container" align="lefttop" width="100%" height="100" bgcolor="0x000000" bgalpha="0" maskchildren="true" handcursor="false" zorder="0">
+                    <layer name="skin_thumbg" type="image" url="%SWFPATH%/autoskin/skinpng/thumbar-bg.png" y="0" align="top" width="100%" height="100" handcursor="false"/>
+                </layer>              
+            </layer>
+        </layer>
+    </layer>
+
+    <style name="thumb_img_style" width="80" height="80" align="lefttop" keep="true" oy="6" onover="set(alpha,0.9);" onout="set(alpha,1.0);" />
+    <style name="thumb_bg_style" width="82" height="82" type="container" ox="-1" oy="-1" align="lefttop" keep="true" bgborder="2 0xffffff 1" onover="set(alpha,0.6);" onout="set(alpha,1.0);" zorder="1" />
+    <style name="thumb_bg_sel_style" width="82" height="82" type="container" ox="-1" oy="-1" align="lefttop" keep="true" bgborder="2 0x01ddff 1" onover="set(alpha,0.6);" onout="set(alpha,1.0);" zorder="1" />
+    <style name="skin_thumb_title_bg_style" keep="true" type="container" width="84" height="24" align="leftbottom" y="0" bgcolor="0x000000" bgalpha="0.3" />
+    <style name="skin_thumb_title_style" vcenter="true" keep="true" width="108" height="20" url="%SWFPATH%/plugins/textfield.swf" align="bottom" y="2" enabled="false" background="false" wordwrap="true" border="false" css="text-align:center; color:#FFFFFF; font-family:微软雅黑; font-size:16px;line-height:18px;letter-spacing:2px;"/>
+    <style name="skin_thumb_title_style_sel" vcenter="true" keep="true" width="108" height="20" url="%SWFPATH%/plugins/textfield.swf" align="bottom" y="2" enabled="false" background="false" wordwrap="true" border="false" css="text-align:center; color:#01ddff; font-family:微软雅黑; font-size:16px;line-height:18px;letter-spacing:2px;"/>
+    <!-- <style name="skin_qrcode_con_style" keep="true" css="text-align:center;font-family:微软雅黑; font-size:14px;"/> -->
+    
+    <layer devices="!handheld" name="skin_qrcode_con" type="container" keep="true" visible="false" align="topright"  x="10" y="20" width="107" height="107"  bgborder="1 0x000000 0.2" maskchildren="true">
+        <layer devices="!handheld" name="skin_qrcode" keep="true" visible="true" type="image" bgalpha="0.0" align="topright" width="106" height="106" url="" handcursor="false"/>
+    </layer>
+
+    <plugin name="soundinterface"
+	    url.flash="%SWFPATH%/plugins/soundinterface.swf"
+	    url.html5="%SWFPATH%/plugins/soundinterface.js"
+	    rootpath=""
+	    preload="true"
+	    keep="true"
+	    />
+
+    <theme_config pcscal="1" like_url="%SWFPATH%/autoskin/skinpng/icon-like.png" like_disabled_url="%SWFPATH%/autoskin/skinpng/icon-like2.png"/>
+ 
+    <skin_settings
+        gyro="true"    
+        thumbs="false"    
+        thumbs_width="80" thumbs_height="80" thumbs_padding="12" thumbs_padding2="3" thumbs_crop="0|40|240|160"
+        thumbs_opened="false"
+        thumbs_text="true"
+        thumbs_dragging="true"
+        thumbs_onhoverscrolling="true"
+        thumbs_scrollbuttons="false"
+        thumbs_scrollindicator="false"
+        thumbs_loop="false"
+        tooltips_thumbs="false"
+        loading="get:config.loading_text"
+    />   
+   <!--<include url="%SWFPATH%/plugins/fps.xml" />-->  
+</krpano>

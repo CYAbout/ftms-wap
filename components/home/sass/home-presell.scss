@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// 预售
+.home-presell {
+  .link-item{
+    > ._link{
+      display: block;
+      margin: 30px 0 0 0;
+
+      > .presell-item{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0;
+      }
+    }
+  }
+}
+

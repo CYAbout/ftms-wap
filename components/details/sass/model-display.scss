@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+// 车型展示
+.model-display {
+  // margin: 0 40px;
+
+  > .title {
+    margin: 0 40px;
+    padding: 80px 0 40px 0;
+    border-bottom: 2px solid rgba(2, 2, 2, 0.1);
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+  }
+
+  > .top-pic {
+    margin: 36px 40px 0 40px;
+    // margin-top: 36px;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // 轮播
+  > .model-carousel {
+    position: relative;
+    height: 270px;
+    // margin-top: 20px;
+    margin: 20px 40px 0 40px;
+
+    // 轮播
+    > .swiper {
+      height: 180px;
+      > .swiper-wrapper {
+        > .swiper-slide.item {
+          > img {
+            display: block;
+            //width: 320px;
+            width: 100%;
+            height: 180px;
+            background-color: #d02424;
+          }
+        }
+      }
+    }
+
+    // 指示器
+    .swiper-pagination {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 314px;
+      height: 76px;
+      line-height: 76px;
+      margin-left: -152px;
+      text-align: center;
+
+      > .swiper-pagination-bullet {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 24px;
+        padding: 0;
+        margin: 15px;
+        border-radius: 12px !important;
+        border: solid 2px #ffffff;
+        background-color: #000000;
+        opacity: 0.1;
+        box-sizing: content-box;
+
+        &.swiper-pagination-bullet-active {
+          width: 16px;
+          height: 16px;
+          border-radius: 12px;
+          border: solid 4px #d3b078;
+          background-color: #ffffff;
+          opacity: 1;
+        }
+      }
+    }
+
+    // 前进后退按钮
+    .swiper-button-prev, .swiper-button-next {
+      position: absolute;
+      top: unset;
+      bottom: -6px;
+      width: 40px;
+      height: 76px;
+      line-height: 76px;
+      border: 1px solid transparent; //自定义边框
+      outline: none; //消除默认点击蓝色边框效果
+      text-align: center;
+      font-size: 40px;
+      background-image: none;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+  }
+
+  .bottom-pic {
+    margin-top: 55px;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

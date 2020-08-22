@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+// 未完成问卷调查
+.complete-survey-layer {
+  width: 670px;
+  min-height: 300px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+  .survey-content {
+    margin: 0;
+    padding: 0;
+
+    > .survey-title {
+      margin-top: 84px;
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 5px;
+      color: #333333;
+    }
+
+    // 问卷调查按钮
+    > .questionnaire-btn {
+      width: 300px;
+      height: 70px;
+      line-height: 70px;
+      margin: 60px auto 0 auto;
+      border-radius: 35px;
+      text-align: center;
+      font-size: 24px;
+      background-color: #D3B07A;
+      color: #ffffff;
+
+      > i {
+        margin-right: 24px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -140px;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

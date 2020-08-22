@@ -1,0 +1,602 @@
+@charset "UTF-8";
+
+// 公共头部
+.common-header {
+  height: $header-Height;
+  line-height: $header-Height;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  .fixed{
+    position: fixed
+  }
+
+  .logo {
+    width: 2.76rem;
+    height: $header-Height;
+    line-height: $header-Height;
+    margin-left: 0.2rem;
+    margin-right: 0.3rem;
+   >a> .logoo {
+      display: block;
+      width: 280px;
+      height: 50px;
+      margin: 25px auto 4px auto;
+    }
+    > img {
+      width: 100%;
+      height: 48px
+    }
+  }
+  .site {
+    position: absolute;
+    top: 0;
+    left: 320px;
+    display: block;
+    width: 200px;
+    line-height: $header-Height;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 18px;
+    color: #070002;
+    opacity: 0.6;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 30px;
+      display: block;
+      width: 2px;
+      height: 45px;
+      background-color: #898989;
+      opacity: 0.3;
+    }
+  }
+  // 定位、地址选择
+  .location {
+    margin-right: 30px;
+
+    > div {
+      display: block;
+      > span {
+        text-align: right;
+        letter-spacing: 1px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #000000;
+        @include multi-line-display(1);
+      }
+    }
+    > i {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+
+    }
+  }
+  // 菜单
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 48px;
+    margin-right: 30px;
+    transition: all .6s;
+    
+
+    > i {
+      display: block;
+      font-size: 48px;
+      img {
+        width: 100%;
+      }
+      position: relative;
+      top: -4px;
+    }
+    .img1 {
+      width: 27px;
+      height: 27px;
+    }
+    .img2 {
+      width: 37px;
+      height: 23px;
+    }
+  }
+  .open{
+    transform: rotate(90deg)
+  }
+
+  // 右侧弹出层
+  > .right-popup {
+    > .mint-popup {
+      z-index: 2010;
+
+      &.full-width {
+        width: 100%;
+      }
+
+      &.mint-popup-right {
+        position: fixed;
+        top: $header-Height;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        transform: none;
+      }
+
+      // 内容区
+      .popup-content {
+        > .left-content {
+          background: transparent;
+
+          // 新车列表 | 热销车型
+          > .new-car-list, .hot-selling-list {
+            display: block;
+            height: 1100px;
+            padding-bottom: 60px;
+            overflow-y: auto;
+            @include hide-scrollbar;
+
+            > .car-item {
+              position: relative;
+              .flag-list {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                > img {
+                  display: block;
+                  width: 54px;
+                  height: 50px;
+                  margin-left: 16px;
+                }
+              }
+              > .car-pic {
+                position: relative;
+                width: 280px;
+                height: 110px;
+                margin: 80px auto 36px auto;
+                &.normal {
+                  width: 230px;
+                }
+                > img {
+                  position: absolute;
+                  top: 50%;
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                  max-height: 110px;
+                  transform: translateY(-50%);
+                }
+              }
+              > .title {
+                line-height: 30px;
+                text-align: center;
+                font-size: 28px;
+                color: #333333;
+              }
+              > .sub-title {
+                line-height: 30px;
+                margin-top: 16px;
+                text-align: center;
+                font-size: 22px;
+                color: #333333;
+              }
+              > .order-btn {
+                line-height: 30px;
+                margin-top: 16px;
+                text-align: center;
+                font-size: 22px;
+                color: #003b90;
+
+                > i {
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+
+          > .down-icon {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 36px;
+            color: #000000;
+            opacity: 0.9;
+          }
+        }
+        > .right-content {
+          width: 300px;
+          height: 1234px;
+          border-left: 2px solid rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+
+          // 头像
+          > .head-portrait {
+            position: relative;
+            padding: 60px 0;
+
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              width: 300px;
+              height: 1px;
+              background-color: #000000;
+              opacity: 0.1;
+            }
+
+            > img {
+              display: block;
+              width: 148px;
+              height: 148px;
+              margin: 0 auto;
+              border-radius: 148px;
+            }
+
+            // 未登录
+            > .login-register {
+              width: 148px;
+              line-height: 30px;
+              margin: 18px auto 0 auto;
+
+              > div {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 24px;
+                color: #1B1B1B;
+                opacity: 0.6;
+              }
+            }
+            // 已登录
+            > .has-logined {
+              line-height: 30px;
+              margin: 18px auto 0 auto;
+              text-align: center;
+              font-size: 24px;
+              letter-spacing: 1px;
+              color: #d3b078;
+              @include multi-line-display(1);
+            }
+          }
+
+          // 菜单
+          > .menu-list {
+            display: block;
+            // min-height: 838px;
+            // margin-top: 55px;
+            // margin-left: 50px;
+            overflow-y: auto;
+            @include hide-scrollbar;
+
+            > .list-item {
+              position: relative;
+              display: block;
+              padding: 60px 0 50px 50px;
+              font-size: 26px;
+              font-weight: 600;
+              letter-spacing: 3px;
+              color: #000000;
+
+              &:after {
+                content: '';
+                position: absolute;
+                left: 60px;
+                bottom: 0;
+                width: 25px;
+                height: 4px;
+                background-color: #d3b078;
+              }
+
+              &:nth-child(3) {
+                &:after {
+                  position: absolute;
+                  left: 4px;
+                  bottom: 0;
+                  width: 100%;
+                  height: 1px;
+                  background-color: #e5e5e5;
+                }
+              }
+
+
+              &:last-child {
+                &:after {
+                  display: none;
+                }
+              }
+
+              > i {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 14px;
+              }
+
+              > .on-sale-list {
+                display: block;
+                margin-right: 50px;
+
+                > .on-sale-item {
+                  position: relative;
+                  display: block;
+                  height: 72px;
+                  line-height: 72px;
+                  margin: 0;
+                  padding: 0;
+                  font-size: 24px;
+                  letter-spacing: 2px;
+                  color: #666666;
+                  @include multi-line-display(1);
+
+                  &.active {
+                    color: #d3b078;
+                  }
+
+                  > .flag {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    width: 38px;
+                    height: 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          // 退出登录
+          > .login-out {
+            display: block;
+            width: 300px;
+            height: 82px;
+            line-height: 82px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            background-color: #ffffff;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    > .v-modal {
+      top: $header-Height;
+    }
+  }
+
+  // 下方地址选择弹出层
+  > .address-select-popup {
+    > .mint-popup {
+      top: $header-Height;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      transform: none;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 2010;
+
+      > .select-content {
+        height: 1234px;
+        margin: 0 40px;
+
+        // 搜索狂
+        > .select-header {
+          padding: 40px 0;
+
+          > .search-input {
+            height: 64px;
+            line-height: 64px;
+            margin-right: 20px;
+            border-radius: 5px;
+            border: solid 2px #999999;
+            box-sizing: border-box;
+
+            > input {
+              display: block;
+              height: 40px;
+              line-height: 40px;
+              padding: 0 20px;
+              margin-top: 9px;
+              border: none;
+              font-size: 22px;
+              letter-spacing: 1px;
+              color: #b9b9b9;
+              box-sizing: border-box;
+            }
+          }
+          > .search-btn {
+            width: 220px;
+            height: 64px;
+            line-height: 64px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #d3b07a;
+
+            > i {
+              display: block;
+              height: 64px;
+              line-height: 64px;
+              font-size: 30px;
+              color: #ffffff;
+            }
+          }
+        }
+
+        // 定位
+        > .bd-location {
+          > .tip {
+            line-height: 30px;
+            font-size: 22px;
+            letter-spacing: 1px;
+            color: #999999;
+          }
+          > .location-line {
+            position: relative;
+            height: 80px;
+            line-height: 80px;
+
+            > .name {
+              font-size: 28px;
+              font-weight: 400;
+              letter-spacing: 1px;
+              color: #000000;
+
+              > i {
+                margin-right: 10px;
+                font-size: 26px;
+                color: #d3b07a;
+              }
+
+              .load-icon {
+                position: absolute;
+                left: 40px;
+                top: 20px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+              }
+            }
+            > .refresh {
+              font-size: 24px;
+              letter-spacing: 1px;
+              color: #d3b07a;
+
+              > i {
+                margin-right: 10px;
+                color: #d3b07a;
+                opacity: 0.9;
+              }
+            }
+          }
+          > .separate-line {
+            height: 30px;
+            line-height: 30px;
+            background-color: #000000;
+            opacity: 0.1;
+          }
+        }
+
+        // 选择区
+        > .select-group {
+          // 省
+          > .province-list {
+            width: 140px;
+            padding: 10px 0;
+            border-right: 2px solid rgba(102, 102, 102, .1);
+            overflow-y: auto;
+            @include hide-scrollbar;
+
+            > .province-item {
+              height: 98px;
+              line-height: 98px;
+              text-align: center;
+              font-size: 26px;
+              letter-spacing: 1px;
+              color: #000000;
+
+              > span {
+                @include multi-line-display(1);
+              }
+
+              &.active {
+                font-weight: 600;
+                color: #d3b07a;
+
+                > span {
+                  color: #d3b07a;
+                }
+              }
+            }
+          }
+          // 城市
+          > .city-list {
+            overflow-y: auto;
+            @include hide-scrollbar;
+
+            // 最近访问
+            .recent-visit, .hot-city {
+              margin-left: 40px;
+              @include float-both-clean;
+
+              .label-title {
+                font-size: 26px;
+                letter-spacing: 1px;
+                color: #000000;
+              }
+
+              > ul {
+                display: block;
+
+                > li {
+                  display: block;
+                  height: 60px;
+                  line-height: 60px;
+                  padding: 0 40px;
+                  margin-right: 10px;
+                  margin-top: 10px;
+                  border-radius: 3px;
+                  border: solid 2px rgba(2, 2, 2, .1);
+                  text-align: center;
+                  font-size: 24px;;
+                  letter-spacing: 1px;
+                  color: #000000;
+                  float: left;
+
+                  &.active {
+                    color: #d3b07a;
+                    border-color: #d3b07a;
+                  }
+                }
+              }
+            }
+            // 热门城市
+            .hot-city {
+              margin-top: 100px;
+            }
+            // 城市列表
+            .prv-city-list {
+              margin-top: 40px;
+              margin-left: 40px;
+              @include float-both-clean;
+
+              > li {
+                display: block;
+                height: 60px;
+                line-height: 60px;
+                padding: 0 40px;
+                margin-right: 10px;
+                margin-top: 10px;
+                border-radius: 3px;
+                border: solid 2px rgba(2, 2, 2, .1);
+                text-align: center;
+                font-size: 24px;;
+                letter-spacing: 1px;
+                color: #000000;
+                float: left;
+
+                &.active {
+                  color: #d3b07a;
+                  border-color: #d3b07a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .v-modal {
+      top: $header-Height;
+    }
+  }
+}

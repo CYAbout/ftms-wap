@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+// 消息列表
+.msg-container {
+  margin-bottom: 50px;
+
+  //头部
+  > .msg-header {
+    height: 120px;
+    line-height: 120px;
+    position: relative;
+
+    .header-left {
+      width: 110px;
+      margin-right: 130px;
+
+      > i {
+        display: block;
+        line-height: 120px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+    > .header-right {
+      border-radius: 8px;
+      width: 200px;
+      margin: 20px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #000000;
+      z-index: 999;
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      li {
+        border-radius: 8px;
+        width: 200px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        color: #000000;
+        background: white;
+      }
+    }
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+      margin-right: 250px;
+    }
+  }
+
+  // 选项卡
+  > .msg-tabs {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    > .tab-item {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #999999;
+
+      &:first-child {
+        width: 166px;
+        text-align: left;
+        padding-left: 40px;
+      }
+
+      &:last-child {
+        width: 166px;
+        // text-align: right;
+      }
+      &.active {
+        color: #d3b07a;
+      }
+    }
+  }
+  > .on {
+    color: red;
+  }
+  > .msg-lists {
+    padding-left: 70px;
+    position: relative;
+  }
+  .msg-select-all{
+      position: absolute;
+      right:80px;
+      top:0;
+      z-index:9;
+    }
+  // 消息列表内容
+   .msg-item {
+     position: relative;
+    width: 600px;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);
+    >.msg-item-head{
+        display:flex;
+        align-items: center;
+        > .msg-item-title {
+          width: 300px;
+        font-size: 30px;
+        padding-bottom: 5px;
+        margin-left: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.msg-item-title-active {
+          color: gray;
+        }
+      }
+       > .msg-item-time {
+        font-size: 20px;
+        color: gray;
+        margin-left:auto;
+        flex:0 0 auto;
+      }
+    }
+  
+    >.msg-item-bottom{
+        display:flex;
+        align-items: center;
+       > .msg-item-detail {
+        font-size: 20px;
+        color: gray;
+        position: relative;
+        left: 30px;
+      }
+     
+      > .msg-item-status{
+        font-size: 20px;
+        color: gray;
+        margin-left:auto;
+      }
+    }
+   
+      > .msg-select {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #d3b07a;
+        // border: 1px solid black;
+        right:0;
+        top:0;
+        z-index:1;
+        top:50%;
+        border-radius: 20%;
+        content: "\2713";
+        color: white;
+        transform: translateY(-50%);
+      }
+      > .msg-select-active {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: 1.2px solid black;
+        right:0;
+        top:0;
+        z-index:1;
+        top:50%;
+        border-radius: 20%;
+        content: "\2713";
+        color: red;
+        transform: translateY(-50%);
+      }
+    }
+
+  // 展开更多
+  > .btnMore {
+    margin: 60px 40px 0 40px; // 100px
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #d3b078;
+  }
+  >.msg-footer{
+    margin-top:20px;
+    height:90px;
+    background:#fff;
+    display:flex;
+    padding:0 40px;
+    align-items: center;
+    .msg-footer-btn{
+      background:#d3b078;
+      border-radius:22px;
+      height:60px;
+      flex:1 1 0;
+      font-size:18px;
+      color:#fff;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+     
+    }
+     .msg-footer-btn+.msg-footer-btn{
+        margin-left:20px;
+      }
+  }
+}
+
+

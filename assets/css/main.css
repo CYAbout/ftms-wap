@@ -1,0 +1,39 @@
+/*全局路由动画 进入和退出时的渐隐渐现的效果 用nuxt-link跳转才有用*/
+.page-enter-active, .page-leave-active {
+  transition: opacity 1s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+/**
+ * 单独设置页面动效
+ * 使用：export default { transition:'test'}
+ */
+.test-enter-active, .test-leave-active {
+  transition: all 1s;
+  font-size: 12px;
+
+}
+
+.test-enter, .test-leave-active {
+  opacity: 0;
+  font-size: 40px;
+}
+
+/*有赞图标引入阿里图标*/
+@font-face {
+  font-family: 'custom-iconfont';
+  src: url('./../iconfont/iconfont.ttf') format('truetype');
+}
+
+.van-icon {
+  font-family: 'vant-icon', 'custom-iconfont' !important;
+}
+
+image[lazy=loading] {
+  width: 40px;
+  height: 300px;
+  margin: auto;
+}

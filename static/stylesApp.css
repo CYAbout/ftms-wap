@@ -1,0 +1,1999 @@
+html, body, ul, li, p, a, form, ol, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: '微软雅黑';
+    font-size: 12px;
+    outline: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    onselectstart: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #14171f;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.clear:after {
+    content: ' ';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#application-canvas {
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#application-canvas.fill-mode-NONE {
+    margin: auto;
+}
+
+#application-canvas.fill-mode-KEEP_ASPECT {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+#application-canvas.fill-mode-FILL_WINDOW {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+canvas#application-canvas:focus {
+    outline: none;
+}
+
+/*UI*/
+.canvasUiContro {
+    position: absolute;
+    bottom: 7px;
+    height: 1.4rem;
+    width: 90%;
+    text-align: center;
+    transform-origin: bottom;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.canvasUiContro > div {
+    transition: all 0.5s;
+    transform: translateY(2rem);
+}
+
+.canvasUiContro > div.in {
+    transform: translateY(0);
+}
+
+
+.canvasUiContro .vehicle {
+    width: 60%;
+    height: 35px;
+    line-height: 35px;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro .vehicle > div {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.canvasUiContro .vehicle > div.in {
+    background-color: #d3b078;
+}
+
+.canvasUiContro .vehicle span {
+    display: block;
+    margin: auto;
+    width: 2.2rem;
+    height: 1rem;
+    margin-bottom: -0.1rem;
+    margin-top: -0.05rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.canvasUiContro .car1 {
+    border-radius: 0.9rem 0 0 0.9rem;
+}
+
+.canvasUiContro .car2 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro .car4 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro .car3, .canvasUiContro .car2 {
+    border-radius: 0;
+}
+
+.canvasUiContro .vehicle span {
+    margin-top: -0.15rem;
+    margin-bottom: -0.16rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro .vehicle div.in span {
+    background-size: 100%;
+    margin-top: -0.3rem;
+    margin-bottom: -0rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro .colorList {
+    width: 10rem;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro .colorList > div {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.canvasUiContro .colorList > div.in {
+    transform: scale(1) translateY(-0.2rem);
+}
+
+.canvasUiContro .colorList > div:hover {
+    /*transform: scale(0.8);*/
+}
+
+.canvasUiContro .colorList > div.in:hover {
+    /*transform: scale(1) translateY(-0.1rem);*/
+}
+
+.canvasUiContro .colorTitle {
+    bottom: 135px;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* display: none !important; */
+}
+
+.canvasUiContro .colorTitle > p {
+    position: absolute;
+    width: 140px;
+    height: 44px;
+    line-height: 44px;
+    bottom: 17px;
+    display: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.canvasUiContro .colorTitle > p.in {
+    display: block;
+    text-align: center;
+    left: -4px;
+}
+
+.canvasUiContro .color1 {
+    background-image: url("canvas/files/image/color-4.jpg");
+}
+
+.canvasUiContro .color2 {
+    background-image: url("canvas/files/image/color-1.jpg");
+}
+
+.canvasUiContro .color3 {
+    background-image: url("canvas/files/image/color-2.jpg");
+}
+
+.canvasUiContro .color4 {
+    background-image: url("canvas/files/image/color-3.jpg");
+}
+
+.canvasUiContro .color5 {
+    background-image: url("canvas/files/image/color-5.jpg");
+}
+
+.canvasUiContro .color6 {
+    background-image: url("canvas/files/image/color-6.jpg");
+}
+
+.canvasUiContro .intierior {
+    width: 4rem;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro .intierior > div {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.canvasUiContro .intierior1 {
+    background-image: url('canvas/files/image/intierion-2.jpg');
+}
+
+.canvasUiContro .intierior2 {
+    background-image: url('canvas/files/image/intierion-1.jpg');
+}
+
+.canvasUiContro .intierior3 {
+    background-image: url('canvas/files/image/intierion-3.jpg');
+}
+
+.canvasUiContro .intierior > div.in {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+.canvasUiContro .intierior > div:hover {
+    transform: scale(0.8);
+}
+
+.canvasUiContro .intierior > div.in:hover {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+
+/* 卡罗拉 */
+.canvasUiContro_cal {
+    position: absolute;
+    bottom: 7px;
+    height: 1.4rem;
+    width: 100%;
+    text-align: center;
+    /* transform: scale(0.7); */
+    transform-origin: bottom;
+}
+
+.canvasUiContro_cal > div {
+    transition: all 0.5s;
+    transform: translateY(2rem);
+}
+
+.canvasUiContro_cal > div.in {
+    transform: translateY(0);
+}
+
+
+.canvasUiContro_cal .vehicle {
+    width: 80%;
+    height: 35px;
+    line-height: 35px;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_cal .vehicle > div {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.canvasUiContro_cal .vehicle > div.in {
+    width: 25%;
+    background-color: #d3b078;
+    font-weight: bold;
+}
+
+.canvasUiContro_cal .vehicle span {
+    display: block;
+    margin: auto;
+    width: 2.2rem;
+    height: 1rem;
+    margin-bottom: -0.1rem;
+    margin-top: -0.05rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.canvasUiContro_cal .car1 {
+    border-radius: 0.9rem 0 0 0.9rem;
+}
+
+.canvasUiContro_cal .car2 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro_cal .car4 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro_cal .car3, .canvasUiContro_cal .car2 {
+    border-radius: 0;
+}
+
+.canvasUiContro_cal .vehicle span {
+    margin-top: -0.15rem;
+    margin-bottom: -0.16rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro_cal .vehicle div.in span {
+    background-size: 100%;
+    margin-top: -0.3rem;
+    margin-bottom: -0rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro_cal .car1 span {
+    background-image: url('canvas-cal/files/image/vehicle-1.png');
+}
+
+.canvasUiContro_cal .car2 span {
+    background-image: url('canvas-cal/files/image/vehicle-2.png');
+}
+
+.canvasUiContro_cal .car3 span {
+    background-image: url('canvas-cal/files/image/vehicle-3.png');
+}
+
+.canvasUiContro_cal .car4 span {
+    background-image: url('canvas-cal/files/image/vehicle-4.png');
+}
+
+.canvasUiContro_cal .colorList {
+    width: 90%;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_cal .colorList > div {
+    width: 0.93rem;
+    height: 0.93rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.canvasUiContro_cal .colorList > div.in {
+    transform: scale(1) translateY(-0.2rem);
+}
+
+.canvasUiContro_cal .colorList > div:hover {
+    /*transform: scale(0.8);*/
+}
+
+.canvasUiContro_cal .colorList > div.in:hover {
+    /*transform: scale(1) translateY(-0.1rem);*/
+}
+
+.canvasUiContro_cal .colorTitle {
+    bottom: 135px;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+
+.canvasUiContro_cal .colorTitle > p {
+    position: absolute;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    bottom: 17px;
+    display: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.canvasUiContro_cal .colorTitle > p.in {
+    display: block;
+    text-align: center;
+    left: -4px;
+    font-size: 16px;
+}
+
+.canvasUiContro_cal .color1 {
+    background-image: url("canvas-cal/files/image/color-1.png");
+}
+
+.canvasUiContro_cal .color2 {
+    background-image: url("canvas-cal/files/image/color-2.jpg");
+}
+
+.canvasUiContro_cal .color3 {
+    background-image: url("canvas-cal/files/image/color-3.jpg");
+}
+
+.canvasUiContro_cal .color4 {
+    background-image: url("canvas-cal/files/image/color-4.jpg");
+}
+
+.canvasUiContro_cal .color5 {
+    background-image: url("canvas-cal/files/image/color-5.jpg");
+}
+
+.canvasUiContro_cal .color6 {
+    background-image: url("canvas-cal/files/image/color-6.png");
+}
+
+.canvasUiContro_cal .color7 {
+    background-image: url("canvas-cal/files/image/color-7.jpg");
+}
+
+.canvasUiContro_cal .intierior {
+    width: 3.29rem;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_cal .intierior > div {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.canvasUiContro_cal .intierior1 {
+    background-image: url('canvas-cal/files/image/intierion-2.jpg');
+}
+
+.canvasUiContro_cal .intierior2 {
+    background-image: url('canvas-cal/files/image/intierion-1.jpg');
+}
+
+.canvasUiContro_cal .intierior3 {
+    background-image: url('canvas-cal/files/image/intierion-3.jpg');
+}
+
+.canvasUiContro_cal .intierior > div.in {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+.canvasUiContro_cal .intierior > div:hover {
+    transform: scale(0.8);
+}
+
+.canvasUiContro_cal .intierior > div.in:hover {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+/*UI 亦泽*/
+.canvasUiContro_yz {
+    position: absolute;
+    bottom: 7px;
+    height: 1.4rem;
+    width: 100%;
+    text-align: center;
+    transform: scale(0.7);
+    transform-origin: bottom;
+}
+
+.canvasUiContro_yz > div {
+    transition: all 0.5s;
+    transform: translateY(2rem);
+}
+
+.canvasUiContro_yz > div.in {
+    transform: translateY(0);
+}
+
+
+.canvasUiContro_yz .vehicle {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_yz .vehicle > div {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.canvasUiContro_yz .vehicle > div.in {
+    width: 25%;
+    background-color: #d3b078;
+    font-weight: bold;
+}
+
+.canvasUiContro_yz .vehicle span {
+    display: block;
+    margin: auto;
+    width: 2.2rem;
+    height: 1rem;
+    margin-bottom: -0.1rem;
+    margin-top: -0.05rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.canvasUiContro_yz .car1 {
+    border-radius: 0.9rem 0 0 0.9rem;
+}
+
+.canvasUiContro_yz .car2 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro_yz .car4 {
+    border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.canvasUiContro_yz .car3, .canvasUiContro_yz .car2 {
+    border-radius: 0;
+}
+
+.canvasUiContro_yz .vehicle span {
+    margin-top: -0.15rem;
+    margin-bottom: -0.16rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro_yz .vehicle div.in span {
+    background-size: 100%;
+    margin-top: -0.3rem;
+    margin-bottom: -0rem;
+    width: 2.44rem;
+}
+
+.canvasUiContro_yz .car1 span {
+    background-image: url('canvas-yz/files/image/vehicle-1.png');
+}
+
+.canvasUiContro_yz .car2 span {
+    background-image: url('canvas-yz/files/image/vehicle-2.png');
+}
+
+.canvasUiContro_yz .car3 span {
+    background-image: url('canvas-yz/files/image/vehicle-3.png');
+}
+
+.canvasUiContro_yz .car4 span {
+    background-image: url('canvas-yz/files/image/vehicle-4.png');
+}
+
+.canvasUiContro_yz .colorList {
+    width: 10rem;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_yz .colorList > div {
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 3px;
+}
+
+.canvasUiContro_yz .colorList > div.in {
+    transform: scale(1) translateY(-0.2rem);
+}
+
+.canvasUiContro_yz .colorList > div:hover {
+    /*transform: scale(0.8);*/
+}
+
+.canvasUiContro_yz .colorList > div.in:hover {
+    /*transform: scale(1) translateY(-0.1rem);*/
+}
+
+.canvasUiContro_yz .colorTitle {
+    bottom: 135px;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+}
+
+.canvasUiContro_yz .colorTitle > p {
+    position: absolute;
+    width: 140px;
+    height: 44px;
+    line-height: 44px;
+    bottom: 17px;
+    display: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.canvasUiContro_yz .colorTitle > p.in {
+    display: block;
+    text-align: center;
+    left: -4px;
+}
+
+.canvasUiContro_yz .color1 {
+    background-image: url("canvas-yz/files/image/icon14.png");
+}
+
+.canvasUiContro_yz .color2 {
+    background-image: url("canvas-yz/files/image/icon15.png");
+}
+
+.canvasUiContro_yz .color3 {
+    background-image: url("canvas-yz/files/image/icon16.png");
+}
+
+.canvasUiContro_yz .color4 {
+    background-image: url("canvas-yz/files/image/icon17.png");
+}
+
+.canvasUiContro_yz .color5 {
+    background-image: url("canvas-yz/files/image/icon18.png");
+}
+
+.canvasUiContro_yz .color6 {
+    background-image: url("canvas-yz/files/image/icon19.png");
+}
+
+.canvasUiContro_yz .color7 {
+    background-image: url("canvas-yz/files/image/icon19-2.png");
+}
+
+.canvasUiContro_yz .color8 {
+    background-image: url("canvas-yz/files/image/icon19-3.png");
+}
+
+.canvasUiContro_yz .color9 {
+    background-image: url("canvas-yz/files/image/icon19-4.png");
+}
+
+
+.canvasUiContro_yz .intierior {
+    width: 3.29rem;
+    height: 1rem;
+    background: #ffffff;
+    border-radius: 0.90rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+    font-size: 0.14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.canvasUiContro_yz .intierior > div {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: 0.73rem;
+    margin: 0 0.07rem;
+    margin-top: 0rem;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.canvasUiContro_yz .intierior1 {
+    background-image: url('canvas-yz/files/image/intierion-2.jpg');
+}
+
+.canvasUiContro_yz .intierior2 {
+    background-image: url('canvas-yz/files/image/intierion-1.jpg');
+}
+
+.canvasUiContro_yz .intierior3 {
+    background-image: url('canvas-yz/files/image/intierion-3.jpg');
+}
+
+.canvasUiContro_yz .intierior > div.in {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+.canvasUiContro_yz .intierior > div:hover {
+    transform: scale(0.8);
+}
+
+.canvasUiContro_yz .intierior > div.in:hover {
+    transform: scale(1) translateY(-0.1rem);
+}
+
+#canvasUiContro .fullScreen {
+    width: 31px;
+    height: 31px;
+    background: url('canvas/files/image/mobile-6.png') no-repeat center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 31px;
+    background-size: 22px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#canvasUiContro .fullScreen:after {
+    content: '横屏展示';
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    font-size: 20px;
+    top: 32px;
+    left: -8px;
+    color: #000000;
+    font-size: 12px;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+
+.matchings .scale {
+    width: 208px;
+    height: 58px;
+    position: absolute;
+    bottom: 42px;
+    left: 4%;
+    background: #ffffff;
+    border-radius: 58px;
+    z-index: 1;
+}
+
+.matchings .scale > div {
+    float: left;
+}
+
+.matchings .scale .big {
+    width: 49%;
+    height: 58px;
+    background: url(canvas/files/image/scale-btn1.png) center no-repeat;
+    cursor: pointer;
+}
+
+.matchings .scale .status {
+    height: 140px;
+    width: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+.matchings .scale .status > div {
+    position: absolute;
+    width: 100%;
+    height: 49%;
+    bottom: 0;
+    background: #000;
+}
+
+.matchings .scale .small {
+    width: 50%;
+    height: 58px;
+    background: url(canvas/files/image/scale-btn2.png) center no-repeat;
+    cursor: pointer;
+    border-left: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1700px) {
+    html {
+        font-size: 90px
+    }
+
+    .canvasUiContro .colorTitle {
+        bottom: 315px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .canvasUiContro.da .vehicle {
+        width: 75%;
+    }
+
+    html {
+        font-size: 40px
+    }
+
+    .canvasUiContro .colorList > div.in > p {
+        bottom: -18px;
+        left: -29px;
+        font-size: 11px;
+    }
+
+    .canvasUiContro .colorTitle {
+        bottom: 100px;
+        transform: scale(0.7);
+    }
+
+    .canvasUiContro .colorList {
+        width: 280px;
+    }
+
+    .canvasUiContro .colorList > div {
+        margin: 0;
+        background-size: auto 100%;
+    }
+
+    .canvasUiContro .colorTitle > p {
+        bottom: -37px;
+    }
+
+
+    .waiguan {
+        width: 66px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #d3b078;
+        position: absolute;
+        margin: auto;
+        top: 5%;
+        left: 20px;
+        line-height: 31px;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .waiguan.in {
+        background-color: #d3b078;
+        color: #FFFFFF;
+    }
+    .waiguan.left{
+        left:100px;
+    }
+    .chexing {
+        width: 66px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #d3b078;
+        position: absolute;
+        margin: auto;
+        top: 5%;
+        left: 20px;
+        line-height: 31px;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .chexing.left{
+        left:20px;
+    }
+    .chexing.in {
+        background-color: #d3b078;
+        color: #FFFFFF;
+    }
+
+    .neishi {
+        width: 66px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #d3b078;
+        position: absolute;
+        margin: auto;
+        top: 5%;
+        left: 100px;
+        line-height: 31px;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .neishi.in {
+        background-color: #d3b078;
+        color: #FFFFFF;
+    }
+    .neishi.left{
+        left:180px;
+    }
+
+}
+
+/*loading*/
+#application-splash-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#application-splash-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(canvas/files/image/loading-bg.jpg) no-repeat center;
+    background-size: 100%;
+}
+
+#application-splash {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+#application-splash img {
+    width: 100%;
+    animation: appRotate 1s linear infinite;
+}
+
+#application-splash-number {
+    color: #000000;
+    text-align: center;
+    font-size: 0.24rem;
+}
+
+@keyframes appRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#progress-bar-container {
+    margin: 20px auto 0 auto;
+    height: 2px;
+    width: 100%;
+    background-color: #1d292c;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #f60;
+}
+
+.hengping {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* z-index: 20000000000; */
+    z-index: 2000;
+    display: none;
+}
+
+.hengping .img1 {
+    width: 245px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hengping .img2 {
+    width: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.hengping.in {
+    display: block;
+}
+
+
+.tui-hengping {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* z-index: 20000000000; */
+    z-index: 2000;
+    display: none;
+}
+
+.tui-hengping .img1 {
+    width: 245px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content .left {
+    display: none;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.content .left > div {
+    width: 125px;
+    /* height: 170px; */
+    display: block;
+}
+
+.content .left > div > div {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 15px;
+    width: 50%;
+    margin: 15px auto;
+}
+
+.content .left > div > div.in {
+    border-bottom: 2px solid #d3b078;
+}
+
+.fullback {
+    width: 31px;
+    height: 31px;
+    background: url('canvas/files/image/mobile-6s.png') no-repeat center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 31px;
+    background-size: 22px;
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    display: none;
+    cursor: pointer;
+
+}
+
+@media all and (orientation: landscape) {
+    /* #myHeader, .book-header, .common-footer, .bm-box, .fullScreen {
+        display: none !important;
+    } */
+    html, body {
+        overflow: hidden;
+    }
+
+    .common-footer {
+        display: none !important;
+    }
+
+    .page-main {
+        height: 100% !important;
+    }
+
+    .bm-content {
+        position: absolute;
+        top: 0 !important;
+        height: 100vh !important;
+    }
+
+    .bm-content .bm-box .op-btn1 .warning-text, .version-select > .operation-group .op-btn1 .warning-text {
+        display: none !important;
+    }
+
+    .book-container {
+        margin-bottom: 0 !important;
+    }
+
+    .hengping.in {
+        display: none;
+    }
+
+    .tui-hengping {
+        z-index: 100000;
+    }
+
+    /* #application-canvas{
+         margin-top:-7%;
+     } */
+    .bm-content {
+        z-index: 1111;
+    }
+
+    .matchings {
+        width: 100vw;
+        height: 100vh !important;
+        top: 0;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    .pre-step {
+        z-index: 0;
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+
+    .content .left {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        z-index: 11111;
+        /* opacity: .3; */
+    }
+
+    .content .foot {
+        display: block !important;
+        z-index: 11111;
+    }
+
+    .fullback {
+        display: block;
+    }
+
+    /* .content .bm-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 70px;
+     border-radius: 35px;
+    } */
+    #application-canvas {
+        margin-top: -30px;
+    }
+
+    .canvasUiContro .colorTitle > p.in {
+        bottom: 43px;
+        left: -20px;
+    }
+
+    .canvasUiContro_cal .colorTitle > p.in {
+        bottom: 14px;
+        left: -460%;
+        font-size: 16px;
+    }
+
+    .tui-hengping.in {
+        display: block;
+    }
+
+    .canvasUiContro > div {
+        transition: all 0.5s;
+        transform: translateX(5rem);
+    }
+
+    .canvasUiContro > div.in {
+        transform: translateX(0);
+    }
+
+    .canvasUiContro {
+        width: 12%;
+        right: 10px;
+        height: 85%;
+        left: auto;
+        top: 0;
+        bottom: 0;
+    }
+
+    .canvasUiContro .vehicle > div {
+        width: 100%;
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    .foot.in {
+        bottom: 25px;
+    }
+
+    .canvasUiContro .vehicle > div.in {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .canvasUiContro .vehicle {
+        height: 100%;
+    }
+
+    .canvasUiContro .vehicle span {
+        margin-left: -8px;
+        width: 120%;
+        height: 60px;
+        margin-top: 0px;
+        margin-bottom: -11px;
+        background-position: center;
+    }
+
+    .canvasUiContro .vehicle div b {
+        display: block;
+        line-height: 10px;
+        margin-top: 43px;
+    }
+
+    .canvasUiContro .vehicle div.in span {
+        width: 120%;
+        margin-top: 0px;
+        margin-bottom: -9px;
+    }
+
+    .canvasUiContro .colorList {
+        width: 60px;
+        height: 255px;
+        top: 0;
+        bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .canvasUiContro .colorList > div {
+        width: 40px;
+        height: 40px;
+    }
+
+    .canvasUiContro .intierior > div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    .canvasUiContro .intierior {
+        width: 60px;
+        height: 138px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .canvasUiContro .colorTitle {
+        bottom: -0.5rem;
+        left: -690%;
+    }
+
+    .canvasUiContro .colorList > div.in {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro .vehicle {
+        width: 100%;
+    }
+
+    .canvasUiContro.da .vehicle {
+        width: 52px;
+        /*height:300px;*/
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+
+    .canvasUiContro .car1 {
+        border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    .canvasUiContro .car4 {
+        border-radius: 0 0 0.9rem 0.9rem;
+    }
+
+    .canvasUiContro .intierior > div.in:hover {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro .vehicle div.in span {
+        background-size: 90%;
+    }
+
+    .foot {
+        width: 88%;
+    }
+
+    /* .content .right .matchings .fullback{right: 100px;} */
+    .canvasUiContro .colorTitle > p {
+        bottom: 23px;
+    }
+
+    .canvasUiContro .vehicle > div {
+        height: 50%;
+    }
+
+    .canvasUiContro.da .vehicle {
+        height: 200px
+    }
+
+
+    .canvasUiContro_cal > div {
+        transition: all 0.5s;
+        transform: translateX(5rem);
+    }
+
+    .canvasUiContro_cal > div.in {
+        transform: translateX(0);
+    }
+
+    .canvasUiContro_cal {
+        width: 10%;
+        right: 10px;
+        height: 100%;
+    }
+
+    .canvasUiContro_cal .vehicle > div {
+        width: 100%;
+    }
+
+    .foot.in {
+        bottom: 25px;
+    }
+
+    .canvasUiContro_cal .vehicle > div.in {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .canvasUiContro_cal .vehicle {
+        height: 100%;
+    }
+
+    .canvasUiContro_cal .vehicle span {
+        margin-left: -8px;
+        width: 120%;
+        height: 60px;
+        margin-top: 0px;
+        margin-bottom: -11px;
+        background-position: center;
+    }
+
+    .canvasUiContro_cal .vehicle div.in span {
+        width: 120%;
+        margin-top: 0px;
+        margin-bottom: -9px;
+    }
+
+    .canvasUiContro_cal .vehicle > div {
+        height: 25%;
+        font-size: 12px;
+        line-height: 70px
+    }
+
+    .canvasUiContro_cal .colorList {
+        width: 60px;
+        height: 90%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .canvasUiContro_cal .colorList > div {
+        width: 70%;
+        height: 13.28%;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .canvasUiContro_cal .intierior > div {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    .canvasUiContro_cal .intierior {
+        width: 60px;
+        height: 111px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .canvasUiContro_cal .colorTitle {
+        bottom: 0;
+        left: 0;
+        transform: translate(0);
+        width:100%;
+    }
+
+    .canvasUiContro_cal .colorList > div.in {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro_cal .vehicle {
+        width: 100%;
+    }
+
+    .canvasUiContro_cal.da .vehicle {
+        height: 80%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+
+    .canvasUiContro_cal .car1 {
+        border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    .canvasUiContro_cal .car4 {
+        border-radius: 0 0 0.9rem 0.9rem;
+    }
+
+    .canvasUiContro_cal .intierior > div.in:hover {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro_cal .vehicle div.in span {
+        background-size: 90%;
+    }
+
+    .foot {
+        width: 88%;
+    }
+
+    .ui_contro .fullback {
+        right: 500px;
+    }
+
+    .canvasUiContro_cal .colorTitle > p {
+        bottom: 23px;
+    }
+
+
+    .canvasUiContro_yz > div {
+        transition: all 0.5s;
+        transform: translateX(5rem);
+    }
+
+    .canvasUiContro_yz > div.in {
+        transform: translateX(0);
+    }
+
+    .canvasUiContro_yz {
+        width: 12%;
+        right: 10px;
+        height: 100%;
+        transform: scale(0.9);
+    }
+
+    .canvasUiContro_yz .vehicle > div {
+        width: 100%;
+    }
+
+    .foot.in {
+        bottom: 25px;
+    }
+
+    .canvasUiContro_yz .vehicle > div.in {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .canvasUiContro_yz .vehicle {
+        height: 100%;
+    }
+
+    .canvasUiContro_yz .vehicle span {
+        margin-left: -8px;
+        width: 120%;
+        height: 60px;
+        margin-top: 0px;
+        margin-bottom: -11px;
+        background-position: center;
+    }
+
+    .canvasUiContro_yz .vehicle div.in span {
+        width: 120%;
+        margin-top: 0px;
+        margin-bottom: -9px;
+    }
+
+    .canvasUiContro_yz .vehicle > div {
+        height: 25%;
+        font-size: 12px;
+        line-height: 70px
+    }
+
+    .canvasUiContro_yz .colorList {
+        width: 60px;
+        height: 100%;
+    }
+
+    .canvasUiContro_yz .colorList > div {
+        width: 70%;
+        height: 10.11%;
+    }
+
+    .canvasUiContro_yz .intierior > div {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0;
+        margin-top:40%;
+    }
+
+    .canvasUiContro_yz .intierior {
+        width: 60px;
+        height: 111px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .canvasUiContro_yz .colorTitle {
+        bottom: -0.1rem;
+        left: -1610%;
+    }
+
+    .canvasUiContro_yz .colorList > div {
+        background-size: contain;
+        margin-top: 0;
+    }
+
+    .canvasUiContro_yz .colorList > div.in {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro_yz .vehicle {
+        width: 100%;
+    }
+
+    .canvasUiContro_yz.da .vehicle {
+        height: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+
+    .canvasUiContro_yz .car1 {
+        border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    .canvasUiContro_yz .car4 {
+        border-radius: 0 0 0.9rem 0.9rem;
+    }
+
+    .canvasUiContro_yz .intierior > div.in:hover {
+        transform: scale(1) translateY(0rem);
+    }
+
+    .canvasUiContro_yz .vehicle div.in span {
+        background-size: 90%;
+    }
+
+    .foot {
+        width: 88%;
+    }
+
+    .matchings .waiguan {
+        position: fixed;
+        width: 66px;
+        left: 20px;
+        margin: 0;
+    }
+    .matchings .waiguan.left{
+        left:100px;
+    }
+
+    .matchings .neishi {
+        position: fixed;
+        width: 66px;
+        left: 100px;
+        margin: 0;
+    }
+
+    .matchings .neishi.left {
+        left:180px
+    }
+    .canvasUiContro_yz .colorTitle > p {
+        bottom: 23px;
+    }
+}
+
+@media all and (orientation: portrait) {
+    .tui-hengping.in {
+        display: none;
+    }
+
+    .bm-content {
+        z-index: 0;
+    }
+}
+
+.content .right > div > img {
+    width: 100%;
+}
+
+.content .right > div.in {
+    opacity: 1;
+    z-index: 11;
+}
+
+.content .foot {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    display: none;
+}
+
+.content .foot > img {
+    width: 100%;
+    display: block;
+}
+
+.content .foot > div {
+    width: 114px;
+    height: 35px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.content .foot > div.in {
+    display: block;
+}
+
+.content .foot .prve {
+    background: url(canvas/files/image/btn1.png) no-repeat center;
+    right: 213px;
+    border-radius: 28px;
+    background-size: 120%;
+}
+
+.content .foot .btn1 {
+    background: url(canvas/files/image/btn2.png) no-repeat center;
+    right: 107px;
+    border-radius: 35px;
+    background-size: 120%;
+}
+
+.content .foot .btn2 {
+    background: url(canvas/files/image/btn3.png) no-repeat center;
+    right: 92px;
+    border-radius: 35px;
+    background-size: 120%;
+}
+
+.content .foot .btn3 {
+    background: url(canvas/files/image/btn4.png) no-repeat center;
+    right: 107px;
+    border-radius: 35px;
+    background-size: 120%;
+}
+
+
+/* @media only screen and (max-width: 950px) {
+	body,html{
+		background-color: #e2e2e2 !important;
+		height: 100%;
+	}
+	.content .right{
+		width: 100%;
+		position: fixed;
+		bottom: 6.5%;
+	}
+	.title img{
+		margin: auto;
+	}
+	.title a{margin:auto;padding:0;}
+	.content{
+		width: 100%;
+		margin: auto;
+	}
+	.content .left>img{
+		width: 90%;
+		max-width: 1000px;
+		margin: auto;
+		margin-top: 15px;
+	}
+	.content .left .img1{
+		margin-top: 15px;
+		display: block;
+	}
+	.content .left{
+		width: 100%;
+		background: #e2e2e2;
+		text-align: center;
+		padding-top: 10px;
+		z-index: 222222;
+		position: fixed;
+		padding-bottom: 21px;
+	}
+	.content .left.in{
+		display:block;
+		width: 17%;
+		padding-top: 8%;
+		height: 100%;
+		top: 0;
+		background: rgba(226,226,226,0.7);
+	}
+	.content .left.in .img1{
+		display: none;
+	}
+	.content .left.in > div{
+		width: 100%;
+		height: 20%;
+	}
+
+	.content .left>div{
+		float: left;
+		width: 30%;
+		background-position: top;
+		margin-top: 5px;
+		display:none;
+		position:absolute;
+		right:0px;
+		top:20px;
+	}
+	.content .left>.clear{
+		display: block;
+		float: none;
+		clear: both;
+		height: 1px;
+		width: 100%;
+		margin: 0;padding: 0;
+	}
+	.content .left .matching{
+		background-image: url('canvas/files/image/mobile-3.png');
+		background-size: 70px;
+		background-position: top;
+	}
+	.content .left .matching.in{
+		background-image: url('canvas/files/image/mobile-3s.png');
+
+	}
+
+	.content .left .matching.yellow{
+		background-image: url('canvas/files/image/mobile-3.png');
+		background-size: 70px;
+		background-position: top;
+	}
+	.content .left .color{
+		background-image: url('canvas/files/image/mobile-4.png');
+		background-size: 70px;
+		background-position: top;
+	}
+	.content .left .color.in{
+		background-image: url('canvas/files/image/mobile-4s.png');
+		background-size: 70px;
+		background-position: top;
+	}
+
+	.content .left .decoration{
+		background-image: url('canvas/files/image/mobile-5.png');
+		background-size: 70px;
+		background-position: top;
+	}
+	.content .left .color{
+		background-position: top;
+		background-size: 70px;
+	}
+	.content .left .decoration.in{
+		background-image: url('canvas/files/image/mobile-5s.png');
+		background-position: top;
+		background-size: 70px;
+	}
+    .content .right .matchings .fullScreen{
+    	width: 31px;
+    	height: 31px;
+		background: url('canvas/files/image/mobile-6.png') no-repeat center;
+		background-color:rgba(255,255,255,0.6);
+		border-radius:31px;
+		background-size:22px;
+		position: fixed;
+		top:30%;
+		right: 30px;
+	    opacity: 1;
+	    cursor: pointer;
+    }
+    .content .right .matchings .fullScreen:after{
+    	content:'横屏展示';
+    	position:absolute;
+    	width:50px;
+    	height:20px;
+    	font-size:20px;
+    	top:32px;
+    	left:-8px;
+    	color:#000000;
+    	font-size:12px;
+    	text-shadow:0 0 10px #ffffff;
+    }
+     .content .right .matchings .fullback{
+    	width: 31px;
+    	height: 31px;
+		background: url('canvas/files/image/mobile-6s.png') no-repeat center;
+		background-color:rgba(255,255,255,0.8);
+		border-radius:31px;
+		background-size:22px;
+		position: absolute;
+		top: 20px;
+		right:50px;
+	    display: none;
+	    cursor: pointer;
+
+    }
+
+	.content .right.full{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0.5%;
+	}
+	.content .right.back{
+		position: fixed;
+		bottom: 6.5%;
+		z-index: 0;
+	}
+
+	.hengping{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 20000000000;
+		display: none;
+	}
+	.hengping .img1{
+		width: 245px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.hengping .img2{
+		width: 20px;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		cursor: pointer;
+	}
+	.hengping.in{
+		display: block;
+	}
+
+
+	.tui-hengping{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 20000000000;
+		display: none;
+	}
+	.tui-hengping .img1{
+		width: 245px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+} */

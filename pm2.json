@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "wap",
+      "script": "./node_modules/nuxt/bin/nuxt-start",
+      "env": {
+          "HOST": "0.0.0.0",
+          "PORT": 20898,
+          "NODE_ENV": "production"
+      }
+    }
+  ]
+}

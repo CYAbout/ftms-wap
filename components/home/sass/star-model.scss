@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+// 明星车型
+.star-model {
+  > .title {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px 0 80px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #000000;
+  }
+
+  > .model-content {
+    margin: 0 40px;
+    border-top: 2px solid rgba(0, 0, 0, .1);
+
+    > .model-select {
+      .model-navbar {
+        margin: 40px 80px;
+
+        .mint-tab-item {
+          position: relative;
+          margin: 0 20px;
+          box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.09);
+          border-radius: 0.05rem;
+          font-size: 0.3rem;
+          letter-spacing: 0.1rem;
+          color: #000000;
+          background-color: #ffffff;
+
+          .mint-tab-item-label {
+            font-size: 0.3rem;
+          }
+
+          i {
+            font-size: 12px;
+            opacity: 0.4;
+            position: absolute;
+            top: 0.3rem;
+            right: 0.2rem;
+          }
+
+          .triangle {
+            display: none;
+          }
+
+          &.is-selected {
+            color: #000000;
+            border-bottom: none;
+
+            .triangle {
+              position: absolute;
+              bottom: -42px;
+              left: 50%;
+              display: block;
+              margin-left: -20px;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-bottom: 20px solid #ffffff;
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-left: -20px;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid rgba(0, 0, 0, 0.25);
+                z-index: -1;
+                filter: blur(1px);
+              }
+            }
+          }
+        }
+        #model_1 {
+          > i{
+            right: 0.6rem;
+          }
+        }
+      }
+
+      .model-tab {
+        padding: 20px 14px;
+        background-color: #ffffff;
+        box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.12);
+
+        .mint-tab-container-wrap {
+          display: block;
+        }
+
+        .model-list {
+          > .list-item {
+            margin-top: 28px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            > .check-item {
+              text-align: center;
+              font-size: 20px;
+              letter-spacing: 2px;
+              color: #4c4c4c;
+
+              &.checked {
+                > i {
+                  color: #d3b078;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //车型列表
+    > .model-car-list {
+      margin-top: 62px;
+
+      > .car-list-item {
+        padding-top: 40px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        > .bm-flex {
+          position: relative;
+          height: 499px;
+
+          // 标签
+          .flag-list {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            > img {
+              display: block;
+              width: 54px;
+              height: 50px;
+              margin-left: 16px;
+            }
+          }
+          // 图片
+          .car-pic {
+            position: relative;
+            width: 288px;
+            height: 106px;
+            margin: 70px auto 0 auto;
+
+            > img {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 100%;
+              height: auto;
+            }
+          }
+          // 标题
+          .titles {
+            margin: 24px 5px 18px 5px;
+
+            > .title {
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              font-size: 34px;
+              color: #000000;
+              @include multi-line-display(1);
+            }
+            > .sub-title {
+              margin: 10px 0 0 0;
+              padding: 0;
+              letter-spacing: 2px;
+              text-align: center;
+              font-size: 20px;
+              color: #b9b9b9;
+              @include multi-line-display(1);
+            }
+          }
+          // 价格
+          .price {
+            position: relative;
+            padding: 20px 0 26px 0;
+            text-align: center;
+            font-size: 30px;
+            color: #000000;
+            opacity: 0.8;
+
+            > span {
+              font-size: 20px;
+              color: #000000;
+              opacity: 0.8;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 50%;
+              top: 0;
+              display: block;
+              width: 262px;
+              height: 2px;
+              margin-left: -131px;
+              background-color: #020202;
+              opacity: 0.1;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              display: block;
+              width: 262px;
+              height: 2px;
+              margin-left: -131px;
+              background-color: #020202;
+              opacity: 0.1;
+            }
+
+          }
+          //预约咨询
+          
+          // 订购
+          .order-immediately {
+            width: 257px;
+            height: 65px;
+            line-height: 65px;
+            margin: 36px auto 0 auto;
+            border: solid 2px #000000;
+            border-radius: 32.5px;
+            text-align: center;
+            font-size: 22px;
+            letter-spacing: 11px;
+            color: #000000;
+
+            > i {
+              font-size: 22px;
+              color: #000000;
+            }
+            
+          }
+          .order-zixun{
+            .icon_zixun{
+              margin-top:0.1rem;
+              display: inline-block;
+              margin-right:0.15rem;
+              width:24px;
+              height:26px;
+              background:url('~/assets/images/home/icon_zixun.png') no-repeat center 0.05rem ;
+              background-size: 24px 23px;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+
+  // 展开更多
+  > .open-more {
+    margin: 60px 40px 0 40px; // 100px
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #d3b078;
+  }
+}
+

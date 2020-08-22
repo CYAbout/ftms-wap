@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+// 统一sass参数设置
+//背景颜色
+$header-bgColor: #ffffff;
+$footer-bgColor: #ffffff;
+$body-bgColor: #ffffff;
+
+//高度
+$header-Height: 100px;
+$footer-Height: 1008px;
+
+// 清除浮动 @include after-clean;
+@mixin float-clean {
+  &:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+}
+
+// 清除浮动
+@mixin float-both-clean {
+  overflow: hidden;
+  zoom: 1;
+
+  &:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+}
+
+// 四周阴影
+@mixin box-shadow-4($lefValue, $rightValue, $topValue, $bottomValue, $color: #dedede) {
+  box-shadow: -$lefValue 0 $lefValue $color, /*左边阴影*/
+  $rightValue 0 $rightValue $color, /*右边阴影*/
+  0 -$topValue $topValue $color, /*顶部阴影*/
+  0 $bottomValue $bottomValue $color; /*底边阴影*/
+}
+
+// 内容居中 - display block
+@mixin block-center-show {
+  display: block;
+  margin: 0 auto;
+}
+
+// 行数控制 多行
+@mixin multi-line-display($num) {
+  display: -moz-box;
+  display: -webkit-box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-line-clamp: $num !important;
+  -webkit-line-clamp: $num !important;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-box-pack: center; // 居中
+  // -webkit-box-align: center;
+  overflow: hidden;
+}
+
+// 文字超出省略
+@mixin word-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 隐藏滚动条
+@mixin hide-scrollbar {
+  /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+  -ms-scroll-chaining: chained;
+  -ms-overflow-style: none;
+  -ms-content-zooming: zoom;
+  -ms-scroll-rails: none;
+  -ms-content-zoom-limit-min: 100%;
+  -ms-content-zoom-limit-max: 500%;
+  -ms-scroll-snap-type: proximity;
+  -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+  -ms-overflow-style: none;
+
+  /*firefox 会导致无法滚动*/
+  // overflow: -moz-scrollbars-none; //firefox
+  // background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 255) 85%, rgb(255, 255, 255) 57%) !important; //会导致火狐不透明
+  -moz-appearance: none !important; //firefox
+
+  // 隐藏滚动条
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+  }
+
+  &::-webkit-scrollbar-button {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+// input去掉上下加减 按钮
+input[type='number'] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+  }
+}
+

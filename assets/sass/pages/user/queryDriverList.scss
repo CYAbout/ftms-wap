@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+// 订单详情
+.order-details-container {
+  margin-bottom: 100px;
+
+  //头部
+  > .order-header {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+    .header-left, .header-right {
+      width: 70px;
+
+      > i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  > .order {
+    background-color: rgba(2, 2, 2, .1);
+
+    // 订单列表内容
+    > .order-content {
+      margin-top: 20px;
+      background-color: #ffffff;
+
+      > .operation-group {
+        padding: 30px 30px 30px 0;
+        border-top: 1px solid rgba(2, 2, 2, .1);
+
+        > .btn-item {
+          width: 220px;
+          height: 66px;
+          line-height: 66px;
+          margin-right: 20px;
+          border-radius: 33px;
+          background-color: #d3b07a;
+          text-align: center;
+          font-size: 24px;
+          letter-spacing: 10px;
+          color: #ffffff;
+
+          &.verification-code{
+            letter-spacing: 6px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      // 订单基本信息
+      .order-basic {
+        padding: 38px 36px 20px 36px;
+        position: relative;
+
+        > .sealInfo {
+          font-size: 26px;
+          color: #333333;
+          margin: 15px 0 0 0;
+          text-align: left;
+          &::before {
+            content: '';
+            width: 0.22rem;
+            height: 0.3rem;
+            flex:none;
+            transform: rotateY(50%);
+            background: url('~/assets/images/drive_dealer/location.png');
+            background-size: 100% 100%;
+            margin-top: 0.1rem;
+          }
+        }
+
+        > .basic-item {
+          height: 68px;
+          line-height: 68px;
+          font-size: 28px;
+          letter-spacing: 1px;
+          color: #333333;
+
+          > .order-state {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #d3b07a;
+          }
+
+          &.certificate{
+            height: 80px;
+            line-height: 80px;
+            margin: 20px 0 50px 0;
+
+            // 查看证书
+            > .view-certificate {
+              width: 670px;
+              height: 80px;
+              line-height: 80px;
+              margin: 0 auto;
+              border-radius: 40px;
+              border: solid 1px #d3b07a;
+              text-align: center;
+              font-size: 24px;
+              letter-spacing: 12px;
+              color: #ffffff;
+              background-color: #d3b07a;
+
+              > i {
+                margin-right: 20px;
+                color: #ffffff;
+              }
+            }
+          }
+
+        }
+
+        .status-change {
+          position: absolute;
+          right: 0;
+          top: 50px;
+          width: 230px;
+          text-align: center;
+
+          > li:nth-of-type(1) {
+            font-size: 32px;
+            font-weight: 600;
+            color: #d3b07a;
+          }
+
+          > li:nth-of-type(2) {
+            font-size: 28px;
+            border: 1px solid #797979;
+            padding: 17px 0;
+            border-radius: 10px;
+            margin-top: 35px;
+          }
+        }
+      }
+
+      // 支付提示
+      > .pay-tip {
+        // height: 84px;
+        // line-height: 84px;
+        line-height: 40px;
+        padding: 22px;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #d12c2c;
+      }
+
+      // 商品信息
+      > .commodity-information {
+        padding: 60px 0 40px 0;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+        > .commodity-label {
+          font-size: 32px;
+          font-weight: 600;
+          letter-spacing: 3px;
+          color: #000000;
+        }
+
+        > .commodity-pic {
+          display: block;
+          width: 100%;
+          min-height: 300px;
+          height: auto;
+          margin-top: 40px;
+          background-color: #707070;
+        }
+
+        > .commodity-title {
+          margin-top: 50px;
+
+          > .title {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #333333;
+            @include multi-line-display(1);
+          }
+
+          > .number {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #666666;
+          }
+        }
+      }
+
+      // 订单属性信息
+      > .order-attribute {
+        padding: 38px 0 20px 0;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+        > .attribute-item {
+          height: 68px;
+          line-height: 68px;
+
+          > .attribute-label {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #666666;
+
+            &.intentional-gold {
+              font-weight: 600;
+            }
+          }
+          > .attribute-value {
+            margin-left: 20px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #666666;
+
+            > img{
+              display: block;
+              height: 60px;
+              line-height: 60px;
+              width: auto;
+            }
+
+            &.intentional-gold {
+              font-weight: 600;
+              color: #d3b07a;
+
+              > span {
+                font-size: 32px;
+              }
+            }
+          }
+        }
+      }
+
+      // 订单跟踪
+      > .order-tracking {
+        padding: 60px 0 60px 0;
+        border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+        > .tracking-label {
+          font-size: 32px;
+          font-weight: 600;
+          letter-spacing: 3px;
+          color: #000000;
+        }
+
+        > .tracking-list {
+          margin-top: 52px;
+          > .tracking-item {
+            height: 106px;
+
+            > .tracking-date {
+              width: 162px;
+              line-height: 30px;
+              text-align: right;
+              font-size: 24px;
+              color: #999999;
+            }
+            > .dot-line {
+              position: relative;
+              width: 94px;
+              height: 106px;
+
+              > .dot {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-left: -12px;
+                border-radius: 12px;
+                background-color: #999999;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: 6px;
+                  left: 50%;
+                  display: block;
+                  width: 12px;
+                  height: 12px;
+                  margin-left: -6px;
+                  border-radius: 6px;
+                  background-color: #ffffff;
+                }
+
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 24px;
+                  left: 50%;
+                  display: block;
+                  width: 2px;
+                  height: 82px;
+                  margin-left: -1px;
+                  background-color: rgba(0, 0, 0, .2);
+                }
+              }
+            }
+            > .tracking-state {
+              line-height: 30px;
+              font-size: 24px;
+              letter-spacing: 1px;
+              color: #999999;
+            }
+
+            &:last-child {
+              > .dot-line {
+                > .dot {
+                  &:after {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            &.active {
+              > .tracking-date, > .tracking-state {
+                color: #333333;
+              }
+              > .dot-line {
+                > .dot {
+                  background-color: #d3b07a;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 订单操作
+      > .order-operation {
+        // 操作按钮
+        > .operation-group {
+          margin-top: 40px;
+
+          > .btn-item {
+            width: 220px;
+            height: 66px;
+            line-height: 66px;
+            // padding: 0 10px;
+            margin-right: 20px;
+            border-radius: 33px;
+            background-color: #d3b07a;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 10px;
+            color: #ffffff;
+
+            &.refund {
+              letter-spacing: 2px;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        // 倒计时
+        .count-down {
+          margin-top: 20px;
+
+          > .time {
+            width: 220px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            color: #d3b07a;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*
+.pass-container {
+    margin-bottom: 100px;
+
+    //头部
+    > .pass-header {
+      height: 100px;
+      line-height: 100px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+      .header-left, .header-right {
+        width: 110px;
+
+        > i {
+          display: block;
+          line-height: 100px;
+          text-align: center;
+          font-size: 30px;
+          font-weight: 600;
+          color: #a0a0a0;
+        }
+      }
+      > .header-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #000000;
+      }
+    }
+}
+  // 心愿单列表
+  > .collect-lists {
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    background-color: rgba(2, 2, 2, .1);
+    zoom: 1;
+    box-sizing: border-box;
+  }*/

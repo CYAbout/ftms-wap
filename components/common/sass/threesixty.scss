@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// 360
+.threesixty {
+  .nav_bar {
+    display: none;
+  }
+
+  .threesixty_images {
+    width: 574px;
+    height: 304px;
+
+    li {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+    }
+  }
+}

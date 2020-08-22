@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// 核销码
+.send-success-layer {
+  width: 670px;
+  height: 165px;
+  line-height: 165px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+  .send-content {
+    margin: 0;
+    padding: 0;
+
+    > .send-title {
+      text-align: center;
+      font-size: 26px;
+      letter-spacing: 5px;
+      color: #333333;
+    }
+  }
+
+  // 关闭按钮
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -180px;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    > i {
+      font-size: 74px;
+      color: #ffffff;
+    }
+  }
+}

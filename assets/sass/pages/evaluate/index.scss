@@ -1,0 +1,119 @@
+@charset "UTF-8";
+    // 商品信息
+    .details-container{
+      //头部
+      > .order-header {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 40px;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);
+
+    .header-left, .header-right {
+      width: 70px;
+
+      > i {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #a0a0a0;
+      }
+    }
+
+    > .header-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: #000000;
+    }
+  }
+
+  // 商品内容
+      > .commodity-information {
+      padding: 60px 0 40px 0;
+      border-bottom: 1px solid rgba(2, 2, 2, .1);
+      margin: 30px;
+
+      > .commodity-label {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: #000000;
+      }
+
+      > .commodity-pic {
+        display: block;
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+        margin-top: 40px;
+        background-color: #707070;
+      }
+
+      > .commodity-title {
+        margin-top: 50px;
+
+        > .title {
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          color: #333333;
+          @include multi-line-display(1);
+        }
+
+        > .number {
+          font-size: 24px;
+          letter-spacing: 1px;
+          color: #666666;
+        }
+      }
+    }
+
+    // 商品属性信息
+    > .order-attribute {
+      padding: 38px 0 20px 0;
+      border-bottom: 1px solid rgba(2, 2, 2, .1);
+      margin: 30px;
+      
+      > .attribute-item {
+        height: 68px;
+        line-height: 68px;
+
+        > .attribute-label {
+          font-size: 24px;
+          letter-spacing: 1px;
+          color: #666666;
+
+          &.intentional-gold {
+            font-weight: 600;
+          }
+        }
+        > .attribute-value {
+          margin-left: 20px;
+          font-size: 24px;
+          letter-spacing: 1px;
+          color: #666666;
+
+          > img{
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            width: auto;
+          }
+
+          &.intentional-gold {
+            font-weight: 600;
+            color: #d3b07a;
+
+            > span {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+    }
+    
+
